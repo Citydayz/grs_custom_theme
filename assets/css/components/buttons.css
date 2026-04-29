@@ -1,0 +1,88 @@
+/**
+ * CBS Theme — boutons (design-system.md §7)
+ */
+
+.btn-primary {
+	font-family: var(--cbs-font-sans);
+	font-weight: 600;
+	font-size: var(--cbs-text-small);
+	letter-spacing: var(--cbs-tracking-wide);
+	text-transform: uppercase;
+	color: var(--cbs-white);
+	background-color: var(--cbs-silver-900);
+	border: 1px solid var(--cbs-silver-900);
+	padding: var(--cbs-space-4) var(--cbs-space-8);
+	border-radius: var(--cbs-radius-sm);
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition:
+		background-color var(--cbs-transition-base),
+		border-color var(--cbs-transition-base);
+}
+
+.btn-primary:hover {
+	background-color: var(--cbs-silver-700);
+	border-color: var(--cbs-silver-700);
+}
+
+.btn-secondary {
+	font-family: var(--cbs-font-sans);
+	font-weight: 600;
+	font-size: var(--cbs-text-small);
+	letter-spacing: var(--cbs-tracking-wide);
+	text-transform: uppercase;
+	color: var(--cbs-gold);
+	background-color: transparent;
+	border: 1px solid var(--cbs-gold);
+	padding: var(--cbs-space-4) var(--cbs-space-8);
+	border-radius: var(--cbs-radius-sm);
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition:
+		background-color var(--cbs-transition-base),
+		color var(--cbs-transition-base);
+}
+
+.btn-secondary:hover {
+	background-color: var(--cbs-gold);
+	color: var(--cbs-white);
+}
+
+.btn-ghost {
+	font-family: var(--cbs-font-sans);
+	font-weight: 500;
+	font-size: var(--cbs-text-small);
+	letter-spacing: var(--cbs-tracking-wide);
+	text-transform: uppercase;
+	color: var(--cbs-white);
+	background-color: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	padding: var(--cbs-space-4) var(--cbs-space-8);
+	border-radius: var(--cbs-radius-sm);
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition:
+		border-color var(--cbs-transition-base),
+		background-color var(--cbs-transition-base);
+}
+
+.btn-ghost:hover {
+	border-color: var(--cbs-white);
+	background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-ghost:focus-visible {
+	outline: 2px solid var(--cbs-gold);
+	outline-offset: 2px;
+}

@@ -1,0 +1,179 @@
+{
+    "key": "group_cbs_etudes_de_cas",
+    "title": "CBS — Études de cas",
+    "fields": [
+        {
+            "key": "field_cbs_edc_contexte",
+            "label": "Contexte",
+            "name": "cbs_contexte",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Établissement et besoin (content-structure.md §7).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_edc_enjeux",
+            "label": "Enjeux",
+            "name": "cbs_enjeux",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Problématiques identifiées.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_edc_accompagnement",
+            "label": "Accompagnement",
+            "name": "cbs_accompagnement",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Actions menées.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_edc_resultats",
+            "label": "Résultats",
+            "name": "cbs_resultats",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Résultats qualitatifs et chiffres si disponibles.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_edc_temoignage",
+            "label": "Témoignage client",
+            "name": "cbs_temoignage",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Citation (optionnel).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_cbs_edc_profil_prospect",
+            "label": "Profil prospect",
+            "name": "cbs_profil_prospect",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Segmentation A \/ B \/ C.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "A": "Profil A",
+                "B": "Profil B",
+                "C": "Profil C"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_cbs_edc_type_mission",
+            "label": "Type de mission",
+            "name": "cbs_type_mission",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Conseil, gestion, staffing… (taxonomie type-mission).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "type-mission",
+            "field_type": "select",
+            "allow_null": 1,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "etude-de-cas"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Champs étude de cas — content-structure.md §7.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1775742329
+}

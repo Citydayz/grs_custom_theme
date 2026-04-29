@@ -1,0 +1,53 @@
+/**
+ * CBS Theme — @font-face (design-system.md §3)
+ * Polices auto-hébergées : /assets/fonts/
+ * Chemins relatifs depuis ce fichier (base/) : ../../fonts/
+ */
+
+@font-face {
+	font-family: "Cormorant Garamond";
+	src: url("../../fonts/CormorantGaramond-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Cormorant Garamond";
+	src: url("../../fonts/CormorantGaramond-Italic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Cormorant Garamond";
+	src: url("../../fonts/CormorantGaramond-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url("../../fonts/Montserrat-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url("../../fonts/Montserrat-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url("../../fonts/Montserrat-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

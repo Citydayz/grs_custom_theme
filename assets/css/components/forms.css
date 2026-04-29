@@ -1,0 +1,500 @@
+/**
+ * CBS Theme — formulaires (forms.md §3) + page Contact.
+ */
+
+/* ——— Page Contact ——— */
+/* Hero : structure identique au hub gestion (.methode-spa-hero + .methode-spa-hero__inner.cbs-container) — padding / fond : cards.css */
+
+.contact-page__hero.methode-spa-hero {
+	text-align: center;
+}
+
+.methode-spa-hero__kicker.contact-page__kicker {
+	font-family: var(--cbs-font-sans);
+	font-size: max(0.75rem, var(--cbs-text-xs));
+	font-weight: 600;
+	font-variant: all-small-caps;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: var(--cbs-silver-300);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--cbs-space-3);
+}
+
+.contact-page__kicker::before,
+.contact-page__kicker::after {
+	content: '';
+	display: inline-block;
+	width: 28px;
+	height: 1px;
+	background: var(--cbs-gold);
+	flex-shrink: 0;
+}
+
+.contact-page__body.cbs-section {
+	padding-block: 0;
+	background-color: var(--cbs-white);
+	width: 100%;
+}
+
+.contact-page__grid {
+	display: grid;
+	grid-template-columns: 1fr 1px 1fr;
+	background: var(--cbs-white);
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	align-items: stretch;
+	box-sizing: border-box;
+}
+
+.contact-page--form-only .contact-page__grid {
+	grid-template-columns: 1fr;
+}
+
+.contact-page__col {
+	padding: var(--cbs-space-12) var(--cbs-space-10);
+	box-sizing: border-box;
+}
+
+.contact-page__col-divider {
+	background: var(--cbs-silver-100);
+	width: 1px;
+	min-height: 100%;
+}
+
+.contact-page__col-title {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wider);
+	text-transform: uppercase;
+	color: var(--cbs-silver-300);
+	display: flex;
+	align-items: center;
+	gap: var(--cbs-space-2);
+	margin: 0 0 var(--cbs-space-8);
+}
+
+.contact-page__col-title::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 1px;
+	background: var(--cbs-gold);
+	flex-shrink: 0;
+}
+
+.contact-page__calendly-card {
+	border: 1px solid var(--cbs-silver-100);
+	border-radius: var(--cbs-radius-sm);
+	overflow: hidden;
+	height: 100%;
+}
+
+.contact-page__calendly-card .calendly-inline-widget {
+	min-width: 100% !important;
+	height: 600px !important;
+}
+
+.contact-page__seo-split {
+	background: var(--cbs-silver-50);
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	border-top: 1px solid var(--cbs-silver-100);
+	box-sizing: border-box;
+}
+
+.contact-page__seo-split-inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: stretch;
+	box-sizing: border-box;
+}
+
+.contact-page__seo-text {
+	padding: var(--cbs-space-16) var(--cbs-space-10);
+	text-align: justify;
+	hyphens: auto;
+}
+
+.contact-page__seo-kicker {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wide);
+	text-transform: uppercase;
+	color: var(--cbs-silver-300);
+	display: flex;
+	align-items: center;
+	gap: var(--cbs-space-2);
+	margin: 0 0 var(--cbs-space-5);
+	text-align: left;
+}
+
+.contact-page__seo-kicker::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 1px;
+	background: var(--cbs-gold);
+	flex-shrink: 0;
+}
+
+/* H2 : même logique que .offre-detail__h2 + hub SEO (classe dans le PHP) */
+.contact-page__seo-heading {
+	margin-top: 0;
+	margin-bottom: var(--cbs-space-6);
+	color: var(--cbs-silver-900);
+	text-align: left;
+}
+
+.contact-page__seo-text p {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	font-weight: 400;
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-800);
+	margin: 0;
+}
+
+.contact-page__seo-img {
+	min-height: 320px;
+	overflow: hidden;
+}
+
+.contact-page__seo-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.contact-page__reassurance {
+	background: var(--cbs-silver-900);
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	border-top: 1px solid var(--cbs-silver-800);
+	box-sizing: border-box;
+}
+
+.contact-page__reassurance-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: stretch;
+	box-sizing: border-box;
+}
+
+.contact-page__reassurance-item {
+	padding: var(--cbs-space-12) var(--cbs-space-10);
+	border-right: 1px solid var(--cbs-silver-800);
+}
+
+.contact-page__reassurance-item:last-child {
+	border-right: none;
+}
+
+.contact-page__reassurance-num {
+	font-family: var(--cbs-font-serif);
+	font-size: 6rem;
+	font-weight: 300;
+	color: var(--cbs-silver-800);
+	line-height: var(--cbs-leading-tight);
+	margin: 0 0 var(--cbs-space-5);
+}
+
+.contact-page__reassurance-item h3 {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h3);
+	font-weight: 600;
+	line-height: var(--cbs-leading-snug);
+	color: var(--cbs-white);
+	margin: 0 0 var(--cbs-space-2);
+}
+
+.contact-page__reassurance-item p {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	font-weight: 400;
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-300);
+	margin: 0;
+}
+
+@media (max-width: 1023px) {
+	.contact-page:not(.contact-page--form-only) .contact-page__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-page__col-divider {
+		display: none;
+	}
+
+	.contact-page__col {
+		padding: var(--cbs-space-10) var(--cbs-space-6);
+	}
+
+	.contact-page__seo-split-inner {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-page__seo-text {
+		padding: var(--cbs-space-12) var(--cbs-space-6);
+	}
+
+	.contact-page__reassurance-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-page__reassurance-item {
+		border-right: none;
+		border-bottom: 1px solid var(--cbs-silver-800);
+	}
+
+	.contact-page__reassurance-item:last-child {
+		border-bottom: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.contact-page .form__row {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ——— Formulaire CBS (global — tunnel diagnostic, etc.) ——— */
+.cbs-form {
+	position: relative;
+	max-width: 100%;
+}
+
+.form__group {
+	margin-bottom: var(--cbs-space-6);
+}
+
+.form__group--checkbox {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cbs-space-2);
+}
+
+.form__group--checkbox input[type="checkbox"] {
+	margin-top: 0.2em;
+	align-self: flex-start;
+	accent-color: var(--cbs-gold-dark);
+}
+
+.form__group--checkbox label {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-700);
+}
+
+.form__group--checkbox a {
+	color: var(--cbs-gold-dark);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+.form__group--checkbox a:hover {
+	color: var(--cbs-gold);
+}
+
+.form__group--checkbox a:focus-visible {
+	outline: 2px solid var(--cbs-gold);
+	outline-offset: 2px;
+}
+
+.form__label {
+	display: block;
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	font-weight: 600;
+	color: var(--cbs-silver-700);
+	margin-bottom: var(--cbs-space-2);
+}
+
+.form__required {
+	color: var(--cbs-error);
+	font-weight: 700;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+	width: 100%;
+	box-sizing: border-box;
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: var(--cbs-leading-normal);
+	color: var(--cbs-silver-900);
+	padding: var(--cbs-space-3) var(--cbs-space-4);
+	border: 1px solid var(--cbs-silver-200);
+	background-color: var(--cbs-white);
+	border-radius: var(--cbs-radius-sm);
+	transition:
+		border-color var(--cbs-transition-fast),
+		background-color var(--cbs-transition-fast),
+		opacity var(--cbs-transition-fast);
+}
+
+.form__textarea {
+	min-height: 8rem;
+	resize: vertical;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+	border-color: var(--cbs-silver-700);
+	outline: 2px solid var(--cbs-gold);
+	outline-offset: 2px;
+}
+
+.form__input.is-valid,
+.form__select.is-valid,
+.form__textarea.is-valid {
+	border-color: var(--cbs-success);
+}
+
+.form__input.is-invalid,
+.form__select.is-invalid,
+.form__textarea.is-invalid {
+	border-color: var(--cbs-error);
+}
+
+.form__error {
+	display: block;
+	color: var(--cbs-error);
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	margin-top: var(--cbs-space-2);
+}
+
+.form__error--checkbox {
+	margin-top: var(--cbs-space-1);
+}
+
+.form__input:disabled,
+.form__select:disabled,
+.form__textarea:disabled,
+.form__submit:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.form__honeypot {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.form__honeypot label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+}
+
+.form__submit {
+	margin-top: var(--cbs-space-4);
+	width: 100%;
+}
+
+@media (min-width: 480px) {
+	.form__submit {
+		width: auto;
+		min-width: 14rem;
+	}
+}
+
+.form__feedback {
+	margin-top: var(--cbs-space-6);
+	padding: var(--cbs-space-4) var(--cbs-space-5);
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: var(--cbs-leading-relaxed);
+	border-radius: var(--cbs-radius-md);
+}
+
+.form__feedback--success {
+	color: var(--cbs-success);
+	background-color: rgba(45, 106, 79, 0.08);
+	border: 1px solid var(--cbs-success);
+}
+
+.form__feedback--error {
+	color: var(--cbs-error);
+	background-color: rgba(192, 57, 43, 0.06);
+	border: 1px solid var(--cbs-error);
+}
+
+/* ——— Page Contact — surcharges formulaire (ne pas affecter le tunnel) ——— */
+.contact-page .form__row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--cbs-space-4);
+	margin-bottom: var(--cbs-space-6);
+}
+
+.contact-page .form__row .form__group {
+	margin-bottom: 0;
+}
+
+.contact-page .cbs-form .form__label {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wider);
+	text-transform: uppercase;
+	color: var(--cbs-silver-600);
+	margin-bottom: var(--cbs-space-2);
+}
+
+.contact-page .cbs-form .form__input,
+.contact-page .cbs-form .form__select,
+.contact-page .cbs-form .form__textarea {
+	border: 1px solid var(--cbs-silver-200);
+	border-radius: var(--cbs-radius-sm);
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: var(--cbs-leading-normal);
+}
+
+.contact-page .form__group--checkbox label {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: var(--cbs-leading-relaxed);
+}
+
+.contact-page .cbs-form .form__submit.btn-primary {
+	font-family: var(--cbs-font-sans);
+	background: transparent;
+	border: 1px solid var(--cbs-silver-900);
+	color: var(--cbs-silver-900);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wider);
+	text-transform: uppercase;
+	padding: var(--cbs-space-4);
+	width: 100%;
+	min-width: 0;
+	border-radius: var(--cbs-radius-sm);
+}
+
+.contact-page .cbs-form .form__submit.btn-primary:hover {
+	background: var(--cbs-silver-900);
+	color: var(--cbs-white);
+	border-color: var(--cbs-silver-900);
+}

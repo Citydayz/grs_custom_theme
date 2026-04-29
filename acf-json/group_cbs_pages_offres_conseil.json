@@ -1,0 +1,1605 @@
+{
+  "key": "group_cbs_pages_offres_conseil",
+  "title": "CBS — Pages Offres Conseil",
+  "fields": [
+    {
+      "key": "field_cbs_offres_tab_hub",
+      "label": "Hub — \/methode-spa-profit\/",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_cbs_offres_hub_hero_kicker",
+      "label": "Hub — Surtitre hero",
+      "name": "cbs_offres_hub_hero_kicker",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_hub_hero_title",
+      "label": "Hub — Titre H1",
+      "name": "cbs_offres_hub_hero_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_hub_hero_subtitle",
+      "label": "Hub — Sous-titre hero",
+      "name": "cbs_offres_hub_hero_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_hub_hero_cta_label",
+      "label": "Hub — Libellé CTA (ancre #niveaux)",
+      "name": "cbs_offres_hub_hero_cta_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_methode_hero_bg",
+      "label": "Hub — Image de fond hero",
+      "name": "cbs_methode_hero_bg",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Optionnel. Photo plein écran derrière le titre ; laisser vide pour le fond sombre par défaut.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "url",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_cbs_offres_hub_position_title",
+      "label": "Hub — Titre positionnement",
+      "name": "cbs_offres_hub_position_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_hub_position_text",
+      "label": "Hub — Texte positionnement",
+      "name": "cbs_offres_hub_position_text",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_cbs_offres_hub_quote",
+      "label": "Hub — Citation forte",
+      "name": "cbs_offres_hub_quote",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_rep_hub_niveaux",
+      "label": "Hub — Cartes 3 niveaux (vide = textes par défaut)",
+      "name": "cbs_offres_hub_niveaux",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter une carte",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_hub_card_kicker",
+          "label": "Surtitre",
+          "name": "card_kicker",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_hub_niveaux"
+        },
+        {
+          "key": "field_cbs_offres_hub_card_title",
+          "label": "Titre",
+          "name": "card_title",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_hub_niveaux"
+        },
+        {
+          "key": "field_cbs_offres_hub_card_duration",
+          "label": "Durée",
+          "name": "card_duration",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_hub_niveaux"
+        },
+        {
+          "key": "field_cbs_offres_hub_card_objective",
+          "label": "Objectif",
+          "name": "card_objective",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 2,
+          "default_value": "",
+          "new_lines": "",
+          "maxlength": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_hub_niveaux"
+        },
+        {
+          "key": "field_cbs_offres_hub_card_obtenez",
+          "label": "Ce que vous obtenez",
+          "name": "card_obtenez",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 2,
+          "default_value": "",
+          "new_lines": "",
+          "maxlength": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_hub_niveaux"
+        },
+        {
+          "key": "field_cbs_offres_hub_card_url",
+          "label": "Lien (sous-page)",
+          "name": "card_url",
+          "aria-label": "",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_hub_niveaux"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_methode_hub_bento",
+      "label": "Hub — Bento « À qui s'adresse cette méthode ? » (3 visuels)",
+      "name": "cbs_methode_hub_bento",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Ordre : 1 = grande image gauche, 2 = haut droite, 3 = bas droite. Vide = contenus par défaut.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "min": 0,
+      "max": 3,
+      "collapsed": "field_cbs_methode_hub_bento_titre",
+      "button_label": "Ajouter un visuel",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_methode_hub_bento_image",
+          "label": "Image",
+          "name": "bento_image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "preview_size": "medium",
+          "parent_repeater": "field_cbs_methode_hub_bento"
+        },
+        {
+          "key": "field_cbs_methode_hub_bento_badge",
+          "label": "Badge (petit caps)",
+          "name": "bento_badge",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_methode_hub_bento"
+        },
+        {
+          "key": "field_cbs_methode_hub_bento_titre",
+          "label": "Titre sur le visuel",
+          "name": "bento_titre",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_methode_hub_bento"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_methode_hub_moa_title",
+      "label": "Hub — Bloc MOA — titre H2",
+      "name": "cbs_methode_hub_moa_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_moa_text",
+      "label": "Hub — Bloc MOA — texte",
+      "name": "cbs_methode_hub_moa_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 8,
+      "default_value": "",
+      "new_lines": "br",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_moa_quote",
+      "label": "Hub — Bloc MOA — citation flottante",
+      "name": "cbs_methode_hub_moa_quote",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_moa_img_1",
+      "label": "Hub — Bloc MOA — image 1 (haut)",
+      "name": "cbs_methode_hub_moa_img_1",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_cbs_methode_hub_moa_img_2",
+      "label": "Hub — Bloc MOA — image 2 (bas, décalée)",
+      "name": "cbs_methode_hub_moa_img_2",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_cbs_methode_hub_stat_1_value",
+      "label": "Hub — Stats — 1 — valeur",
+      "name": "cbs_methode_hub_stat_1_value",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Laisser vide pour n'afficher que le libellé (ex. phrase de clôture).",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "33",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_stat_1_label",
+      "label": "Hub — Stats — 1 — libellé",
+      "name": "cbs_methode_hub_stat_1_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "66",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_stat_2_value",
+      "label": "Hub — Stats — 2 — valeur",
+      "name": "cbs_methode_hub_stat_2_value",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "33",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_stat_2_label",
+      "label": "Hub — Stats — 2 — libellé",
+      "name": "cbs_methode_hub_stat_2_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "66",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_stat_3_value",
+      "label": "Hub — Stats — 3 — valeur",
+      "name": "cbs_methode_hub_stat_3_value",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "33",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_methode_hub_stat_3_label",
+      "label": "Hub — Stats — 3 — libellé",
+      "name": "cbs_methode_hub_stat_3_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "66",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_hub_cta_title",
+      "label": "Hub — CTA final — titre",
+      "name": "cbs_offres_hub_cta_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_hub_cta_text",
+      "label": "Hub — CTA final — texte",
+      "name": "cbs_offres_hub_cta_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_hub_cta_btn",
+      "label": "Hub — CTA final — bouton",
+      "name": "cbs_offres_hub_cta_btn",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_tab_n1",
+      "label": "Niveau 1 — \/diagnostic-strategique\/",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_cbs_offres_n1_hero_kicker",
+      "label": "N1 — Surtitre hero",
+      "name": "cbs_offres_n1_hero_kicker",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n1_hero_title",
+      "label": "N1 — Titre H1",
+      "name": "cbs_offres_n1_hero_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n1_hero_subtitle",
+      "label": "N1 — Sous-titre hero",
+      "name": "cbs_offres_n1_hero_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_n1_prestations_intro",
+      "label": "N1 — Intro section Prestations",
+      "name": "cbs_offres_n1_prestations_intro",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_rep_n1_prestations",
+      "label": "N1 — Prestations (une ligne par entrée)",
+      "name": "cbs_offres_n1_prestations",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_n1_prest_ligne",
+          "label": "Ligne",
+          "name": "ligne",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n1_prestations"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_offres_rep_n1_livrables",
+      "label": "N1 — Livrables",
+      "name": "cbs_offres_n1_livrables",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_n1_livr_ligne",
+          "label": "Ligne",
+          "name": "ligne",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n1_livrables"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_offres_n1_resultat",
+      "label": "N1 — Résultat",
+      "name": "cbs_offres_n1_resultat",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 6,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_rep_n1_pour_qui",
+      "label": "N1 — Pour qui ? (une ligne par profil)",
+      "name": "cbs_offres_n1_pour_qui",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_n1_pour_qui_ligne",
+          "label": "Profil",
+          "name": "ligne",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n1_pour_qui"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_offres_n1_cta_label",
+      "label": "N1 — Libellé CTA",
+      "name": "cbs_offres_n1_cta_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_rep_n1_temoignages",
+      "label": "N1 — Témoignages (vide = [À COMPLÉTER])",
+      "name": "cbs_offres_n1_temoignages",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter un témoignage",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_temoignage_texte",
+          "label": "Texte",
+          "name": "cbs_offres_temoignage_texte",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 4,
+          "default_value": "",
+          "new_lines": "wpautop",
+          "maxlength": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_n1_temoignages"
+        },
+        {
+          "key": "field_cbs_offres_temoignage_auteur",
+          "label": "Auteur",
+          "name": "cbs_offres_temoignage_auteur",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n1_temoignages"
+        },
+        {
+          "key": "field_cbs_offres_temoignage_etablissement",
+          "label": "Établissement",
+          "name": "cbs_offres_temoignage_etablissement",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n1_temoignages"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_offres_tab_n2",
+      "label": "Niveau 2 — \/conception-securisation\/",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_cbs_offres_n2_hero_kicker",
+      "label": "N2 — Surtitre hero",
+      "name": "cbs_offres_n2_hero_kicker",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n2_hero_title",
+      "label": "N2 — Titre H1",
+      "name": "cbs_offres_n2_hero_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n2_hero_subtitle",
+      "label": "N2 — Sous-titre hero",
+      "name": "cbs_offres_n2_hero_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_n2_phases_kicker",
+      "label": "N2 — Phases : surtitre",
+      "name": "cbs_offres_n2_phases_kicker",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Vide = texte par défaut du thème.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n2_phases_title",
+      "label": "N2 — Phases : titre (H2)",
+      "name": "cbs_offres_n2_phases_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Vide = texte par défaut du thème.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n2_phases_lead",
+      "label": "N2 — Phases : texte d'intro",
+      "name": "cbs_offres_n2_phases_lead",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Vide = texte par défaut du thème.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_rep_n2_phases",
+      "label": "N2 — Phases (puces : une par ligne ; vide = défaut §3)",
+      "name": "cbs_offres_n2_phases",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter une phase",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_n2_ph_title",
+          "label": "Titre de phase",
+          "name": "phase_title",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n2_phases"
+        },
+        {
+          "key": "field_cbs_offres_n2_ph_intro",
+          "label": "Texte d'intro (court)",
+          "name": "phase_intro",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "Si vide, l'intro par défaut du thème est utilisée pour cette phase.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 2,
+          "default_value": "",
+          "new_lines": "",
+          "maxlength": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_n2_phases"
+        },
+        {
+          "key": "field_cbs_offres_n2_ph_items",
+          "label": "Puces (une par ligne)",
+          "name": "phase_items",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "Si vide, les puces par défaut du thème sont utilisées pour cette phase.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 6,
+          "default_value": "",
+          "new_lines": "",
+          "maxlength": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_n2_phases"
+        },
+        {
+          "key": "field_cbs_offres_n2_ph_livr",
+          "label": "Livrables",
+          "name": "phase_livrables",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 2,
+          "default_value": "",
+          "new_lines": "",
+          "maxlength": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_n2_phases"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_offres_rep_n2_options",
+      "label": "N2 — Options tarifaires",
+      "name": "cbs_offres_n2_options",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_n2_opt_ligne",
+          "label": "Ligne",
+          "name": "ligne",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n2_options"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_offres_n2_cta_label",
+      "label": "N2 — Libellé CTA",
+      "name": "cbs_offres_n2_cta_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_tab_n3",
+      "label": "Niveau 3 — \/mise-en-performance\/",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_cbs_offres_n3_hero_kicker",
+      "label": "N3 — Surtitre hero",
+      "name": "cbs_offres_n3_hero_kicker",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n3_hero_title",
+      "label": "N3 — Titre H1",
+      "name": "cbs_offres_n3_hero_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_offres_n3_hero_subtitle",
+      "label": "N3 — Sous-titre hero",
+      "name": "cbs_offres_n3_hero_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_n3_contenu_lead",
+      "label": "N3 — Intro section Contenu",
+      "name": "cbs_offres_n3_contenu_lead",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 4,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_cbs_offres_rep_n3_blocs",
+      "label": "N3 — Blocs de contenu",
+      "name": "cbs_offres_n3_blocs",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "Ajouter un bloc",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_cbs_offres_n3_bloc_title",
+          "label": "Titre du bloc",
+          "name": "bloc_title",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "prepend": "",
+          "append": "",
+          "parent_repeater": "field_cbs_offres_rep_n3_blocs"
+        },
+        {
+          "key": "field_cbs_offres_n3_bloc_items",
+          "label": "Puces (une par ligne)",
+          "name": "bloc_items",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "Si vide, contenu par défaut §3 pour ce bloc (index).",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 6,
+          "default_value": "",
+          "new_lines": "",
+          "maxlength": "",
+          "placeholder": "",
+          "parent_repeater": "field_cbs_offres_rep_n3_blocs"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_offres_n3_cta_label",
+      "label": "N3 — Libellé CTA",
+      "name": "cbs_offres_n3_cta_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_slug",
+        "operator": "==",
+        "value": "methode-spa-profit"
+      }
+    ],
+    [
+      {
+        "param": "page_slug",
+        "operator": "==",
+        "value": "diagnostic-strategique"
+      }
+    ],
+    [
+      {
+        "param": "page_slug",
+        "operator": "==",
+        "value": "conception-securisation"
+      }
+    ],
+    [
+      {
+        "param": "page_slug",
+        "operator": "==",
+        "value": "mise-en-performance"
+      }
+    ]
+  ],
+  "menu_order": 1,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [],
+  "active": true,
+  "description": "Champs éditables pour La Méthode Spa Profit™ et les 3 niveaux (content-structure.md §3).",
+  "show_in_rest": 0,
+  "display_title": "",
+  "modified": 1776969600
+}

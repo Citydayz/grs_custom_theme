@@ -1,0 +1,458 @@
+/**
+ * CBS Theme — blocs éditoriaux « Offres Conseil » (hub Méthode, etc.)
+ */
+
+/* Hub Méthode uniquement : hero +20 % vs référence 60vh → 72vh (aucun min-height vh dans cards.css auparavant). */
+.methode-hub-page > .methode-spa-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	min-height: 72vh;
+	min-height: 72dvh;
+}
+
+/* Hub Méthode — « Les 3 niveaux » : fond sombre (ne pas toucher aux autres .methode-niveaux du site). */
+.methode-hub-page .methode-niveaux--dark {
+	background-color: var(--cbs-silver-900);
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveaux__title {
+	color: var(--cbs-white);
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveaux__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	background: var(--cbs-silver-700);
+	border: 1px solid var(--cbs-silver-700);
+	border-radius: 2px;
+	overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+	.methode-hub-page .methode-niveaux--dark .methode-niveaux__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card {
+	position: relative;
+	background: var(--cbs-silver-800);
+	padding: 48px 36px;
+	padding-bottom: 64px;
+	display: flex;
+	flex-direction: column;
+	transition: background 0.3s ease;
+	min-height: 0;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card:hover {
+	background: var(--cbs-silver-700);
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card--featured {
+	border-left: 1px solid var(--cbs-gold);
+	border-right: 1px solid var(--cbs-gold);
+	padding-top: 56px;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card--featured::before {
+	content: "OFFRE PRINCIPALE";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--cbs-gold);
+	color: var(--cbs-silver-900);
+	font-family: var(--cbs-font-sans);
+	font-size: 0.55rem;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	padding: 5px 16px;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__number {
+	font-family: var(--cbs-font-serif);
+	font-size: 5rem;
+	font-weight: 300;
+	color: var(--cbs-silver-700);
+	line-height: 1;
+	margin-bottom: 24px;
+	transition: color 0.3s ease;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card:hover .methode-niveau-card__number {
+	color: var(--cbs-silver-600);
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__badge {
+	font-family: var(--cbs-font-sans);
+	font-size: 0.6rem;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--cbs-gold);
+	margin-bottom: 16px;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__badge::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 1px;
+	background: var(--cbs-gold);
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__title {
+	font-family: var(--cbs-font-serif);
+	font-size: 1.9rem;
+	font-weight: 300;
+	color: var(--cbs-white);
+	line-height: 1.2;
+	margin: 0 0 8px;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__duration {
+	font-family: var(--cbs-font-sans);
+	font-size: 0.7rem;
+	color: var(--cbs-silver-300);
+	letter-spacing: 0.1em;
+	margin-bottom: 28px;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__sep {
+	width: 32px;
+	height: 1px;
+	background: var(--cbs-silver-600);
+	margin-bottom: 24px;
+	flex-shrink: 0;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__objective {
+	font-family: var(--cbs-font-sans);
+	font-size: 0.85rem;
+	font-weight: 300;
+	color: var(--cbs-silver-100);
+	line-height: 1.8;
+	margin: 0 0 28px;
+	flex: 1;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__obtiens-label {
+	font-family: var(--cbs-font-sans);
+	font-size: 0.6rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--cbs-silver-300);
+	margin-bottom: 10px;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__obtiens-text {
+	font-family: var(--cbs-font-sans);
+	font-size: 0.82rem;
+	font-weight: 300;
+	color: var(--cbs-silver-300);
+	line-height: 1.7;
+	margin: 0 0 36px;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__cta {
+	font-family: var(--cbs-font-sans);
+	font-size: 0.65rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--cbs-white);
+	text-decoration: none;
+	padding-bottom: 4px;
+	border-bottom: 1px solid var(--cbs-silver-600);
+	transition:
+		border-color 0.3s ease,
+		color 0.3s ease;
+	width: fit-content;
+	margin-top: auto;
+	align-self: flex-start;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__cta::after {
+	content: "→";
+	margin-left: 10px;
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__cta:hover {
+	border-color: var(--cbs-gold);
+	color: var(--cbs-gold);
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__cta:hover::after {
+	transform: translateX(4px);
+}
+
+.methode-hub-page .methode-niveaux--dark .methode-niveau-card__cta:focus-visible {
+	outline: 2px solid var(--cbs-gold);
+	outline-offset: 4px;
+}
+
+/* —— Section A : bento « À qui s'adresse cette méthode ? » —— */
+.methode-hub-bento {
+	background-color: var(--cbs-white);
+}
+
+.methode-hub-bento__title {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h2);
+	font-weight: 400;
+	line-height: var(--cbs-leading-snug);
+	color: var(--cbs-silver-800);
+	text-align: center;
+	max-width: 36rem;
+	margin: 0 auto var(--cbs-space-12);
+}
+
+.methode-hub-bento__grid {
+	display: grid;
+	gap: var(--cbs-space-4);
+	grid-template-columns: 1fr;
+}
+
+.methode-hub-bento__cell {
+	margin: 0;
+	min-height: 12rem;
+}
+
+.methode-hub-bento__visual {
+	position: relative;
+	height: 100%;
+	min-height: inherit;
+	overflow: hidden;
+	border-radius: var(--cbs-radius-md);
+}
+
+.methode-hub-bento__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 12rem;
+	object-fit: cover;
+	border-radius: var(--cbs-radius-md);
+}
+
+.methode-hub-bento__overlay {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	border-radius: inherit;
+	background: linear-gradient(
+		to top,
+		rgba(13, 17, 23, 0.72) 0%,
+		rgba(13, 17, 23, 0.2) 45%,
+		transparent 100%
+	);
+}
+
+.methode-hub-bento__caption {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: var(--cbs-space-6) var(--cbs-space-5);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--cbs-space-3);
+	z-index: 1;
+}
+
+.methode-hub-bento__badge {
+	display: inline-block;
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wider);
+	text-transform: uppercase;
+	color: var(--cbs-white);
+	background-color: rgba(13, 17, 23, 0.65);
+	padding: var(--cbs-space-2) var(--cbs-space-3);
+	border-radius: var(--cbs-radius-md);
+}
+
+.methode-hub-bento__img-title {
+	font-family: var(--cbs-font-serif);
+	font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+	font-weight: 500;
+	line-height: var(--cbs-leading-snug);
+	color: var(--cbs-white);
+	margin: 0;
+	max-width: 20rem;
+}
+
+@media (min-width: 768px) {
+	.methode-hub-bento__grid {
+		grid-template-columns: 3fr 2fr;
+		grid-template-rows: minmax(195px, 1fr) minmax(195px, 1fr);
+		align-items: stretch;
+		min-height: 400px;
+	}
+
+	.methode-hub-bento__cell--large {
+		grid-row: 1 / -1;
+		grid-column: 1;
+		min-height: 400px;
+	}
+
+	.methode-hub-bento__cell--small {
+		min-height: 195px;
+	}
+
+	.methode-hub-bento__cell--large .methode-hub-bento__img {
+		min-height: 400px;
+	}
+
+	.methode-hub-bento__cell--small .methode-hub-bento__img {
+		min-height: 195px;
+	}
+}
+
+/* —— Section B : split MOA —— */
+.methode-hub-moa {
+	background-color: var(--cbs-silver-50);
+}
+
+.methode-hub-moa__split {
+	display: grid;
+	gap: var(--cbs-space-12);
+	align-items: center;
+}
+
+.methode-hub-moa__kicker {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wider);
+	text-transform: uppercase;
+	color: var(--cbs-silver-500);
+	margin: 0 0 var(--cbs-space-4);
+}
+
+.methode-hub-moa__title {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h2);
+	font-weight: 400;
+	line-height: var(--cbs-leading-snug);
+	color: var(--cbs-silver-800);
+	margin: 0 0 var(--cbs-space-6);
+	max-width: 28rem;
+}
+
+.methode-hub-moa__text {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-600);
+	max-width: 36rem;
+}
+
+.methode-hub-moa__text p {
+	margin: 0 0 var(--cbs-space-4);
+}
+
+.methode-hub-moa__text p:last-child {
+	margin-bottom: 0;
+}
+
+.methode-hub-moa__media {
+	position: relative;
+	padding-bottom: var(--cbs-space-16);
+	max-width: 100%;
+}
+
+.methode-hub-moa__stack {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	max-width: 100%;
+}
+
+.methode-hub-moa__frame {
+	overflow: hidden;
+	border-radius: var(--cbs-radius-md);
+	max-width: 100%;
+}
+
+.methode-hub-moa__img {
+	display: block;
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+	max-height: 420px;
+	object-fit: cover;
+	border-radius: var(--cbs-radius-md);
+}
+
+.methode-hub-moa__quote {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	max-width: min(18rem, 88vw);
+	margin: 0;
+	padding: var(--cbs-space-5) var(--cbs-space-6);
+	background-color: var(--cbs-white);
+	border-radius: var(--cbs-radius-md);
+	box-shadow: var(--cbs-shadow-md);
+	z-index: 2;
+}
+
+.methode-hub-moa__quote p {
+	font-family: var(--cbs-font-serif);
+	font-size: 1rem;
+	font-style: italic;
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-700);
+	margin: 0;
+}
+
+@media (min-width: 960px) {
+	.methode-hub-moa__split {
+		grid-template-columns: 55fr 45fr;
+		gap: var(--cbs-space-10);
+		align-items: start;
+	}
+
+	.methode-hub-moa__frame--offset {
+		margin-top: -60px;
+		margin-left: 40px;
+		align-self: flex-end;
+		max-width: calc(100% - 40px);
+	}
+}
+
+@media (max-width: 959px) {
+	.methode-hub-moa__frame--offset {
+		margin-top: var(--cbs-space-4);
+		margin-left: 0;
+	}
+
+	.methode-hub-moa__quote {
+		position: relative;
+		margin-top: var(--cbs-space-8);
+		max-width: none;
+	}
+}
+
+/* —— Section C : stats (classes liste héritées de .offre-gestion-hub-stats) —— */
+.methode-hub-stats .methode-hub-stats__item--label-only .offre-gestion-hub-stats__label {
+	font-family: var(--cbs-font-serif);
+	font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+	font-weight: 500;
+	line-height: var(--cbs-leading-snug);
+	color: var(--cbs-silver-100);
+}

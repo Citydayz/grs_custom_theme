@@ -1,0 +1,267 @@
+{
+    "key": "group_cbs_page_accueil",
+    "title": "CBS — Page Accueil",
+    "fields": [
+        {
+            "key": "field_cbs_accueil_hero_poster",
+            "label": "Image du bandeau (aperçu \/ fond)",
+            "name": "cbs_accueil_hero_poster",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image de fond et aperçu avant la vidéo. Laisser vide pour utiliser l’image fournie avec le thème.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_cbs_accueil_hero_video",
+            "label": "Vidéo du bandeau",
+            "name": "cbs_accueil_hero_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Fichier MP4. Laisser vide pour la vidéo par défaut du thème. Décochez « Afficher uniquement l’image » pour que la vidéo soit lue.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4"
+        },
+        {
+            "key": "field_cbs_accueil_hero_image_seule",
+            "label": "Afficher uniquement l’image (sans vidéo)",
+            "name": "cbs_accueil_hero_image_seule",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Si activé, aucune vidéo en arrière-plan : seule l’image (ci-dessus ou celle du thème) est affichée.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Bandeau statique (pas de lecture vidéo)",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_cbs_rep_temoignages",
+            "label": "Témoignages",
+            "name": "cbs_accueil_temoignages",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_cbs_temoignage_texte",
+            "button_label": "Ajouter un témoignage",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_temoignage_texte",
+                    "label": "Texte",
+                    "name": "cbs_temoignage_texte",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 5,
+                    "placeholder": "",
+                    "new_lines": "wpautop",
+                    "parent_repeater": "field_cbs_rep_temoignages"
+                },
+                {
+                    "key": "field_cbs_temoignage_auteur",
+                    "label": "Auteur",
+                    "name": "cbs_temoignage_auteur",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_rep_temoignages"
+                },
+                {
+                    "key": "field_cbs_temoignage_etablissement",
+                    "label": "Établissement",
+                    "name": "cbs_temoignage_etablissement",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_rep_temoignages"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_rep_logos",
+            "label": "Logos partenaires",
+            "name": "cbs_accueil_logos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter un logo",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_logo_partenaire",
+                    "label": "Logo",
+                    "name": "cbs_logo_partenaire",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_cbs_rep_logos"
+                },
+                {
+                    "key": "field_cbs_logo_alt",
+                    "label": "Texte alternatif",
+                    "name": "cbs_logo_alt",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_rep_logos"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_afficher_calendly",
+            "label": "Afficher Calendly sur cette page",
+            "name": "cbs_afficher_calendly",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Active le chargement du script Calendly sur l’accueil (widget dans la section « Discutons de votre projet » si l’URL inline est configurée).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Charger les scripts Calendly sur cette page",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1775742332
+}

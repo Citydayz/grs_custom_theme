@@ -1,0 +1,1992 @@
+{
+    "key": "group_cbs_pages_gestion",
+    "title": "CBS — Pages Gestion",
+    "fields": [
+        {
+            "key": "field_cbs_gestion_tab_hub",
+            "label": "Hub — gestion-spa-hotelier",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_cbs_gestion_hub_hero_kicker",
+            "label": "Hub — Surtitre hero",
+            "name": "cbs_gestion_hub_hero_kicker",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_hero_title",
+            "label": "Hub — Titre H1",
+            "name": "cbs_gestion_hub_hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_hero_subtitle",
+            "label": "Hub — Sous-titre",
+            "name": "cbs_gestion_hub_hero_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_badge",
+            "label": "Hub — Badge géographique",
+            "name": "cbs_gestion_hub_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_cta_partielle",
+            "label": "Hub — Libellé carte CTA partielle",
+            "name": "cbs_gestion_hub_cta_partielle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_cta_complete",
+            "label": "Hub — Libellé carte CTA complète",
+            "name": "cbs_gestion_hub_cta_complete",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_link_staffing",
+            "label": "Hub — Lien texte \/staffing\/",
+            "name": "cbs_gestion_hub_link_staffing",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_link_massages",
+            "label": "Hub — Lien texte massages en chambre",
+            "name": "cbs_gestion_hub_link_massages",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_card_partielle_si",
+            "label": "Hub — Carte partielle : « fait pour vous si… »",
+            "name": "cbs_gestion_hub_card_partielle_si",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_card_complete_si",
+            "label": "Hub — Carte complète : « fait pour vous si… »",
+            "name": "cbs_gestion_hub_card_complete_si",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_link_staffing_si",
+            "label": "Hub — Staffing : « fait pour vous si… »",
+            "name": "cbs_gestion_hub_link_staffing_si",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_link_massages_si",
+            "label": "Hub — Massages : « fait pour vous si… »",
+            "name": "cbs_gestion_hub_link_massages_si",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_complement",
+            "label": "Hub — Complément ([À COMPLÉTER] par défaut)",
+            "name": "cbs_gestion_hub_complement",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_cta_title",
+            "label": "Hub — CTA final — titre",
+            "name": "cbs_gestion_hub_cta_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_cta_text",
+            "label": "Hub — CTA final — texte",
+            "name": "cbs_gestion_hub_cta_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_cta_btn",
+            "label": "Hub — CTA final — bouton",
+            "name": "cbs_gestion_hub_cta_btn",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_rep_hub_profiles",
+            "label": "Hub — Profils cibles (« À qui s'adresse ce pôle ? »)",
+            "name": "cbs_gestion_hub_profiles",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = les 3 profils par défaut du thème.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_cbs_gestion_hub_prof_titre",
+            "button_label": "Ajouter un profil",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_hub_prof_titre",
+                    "label": "Titre",
+                    "name": "titre",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_hub_profiles"
+                },
+                {
+                    "key": "field_cbs_gestion_hub_prof_texte",
+                    "label": "Texte",
+                    "name": "texte",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_cbs_gestion_rep_hub_profiles"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_hub_missions",
+            "label": "Hub — Missions (« Ce que nous prenons en charge »)",
+            "name": "cbs_gestion_hub_missions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = les 6 missions par défaut (icônes dans l’ordre).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_cbs_gestion_hub_miss_titre",
+            "button_label": "Ajouter une mission",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_hub_miss_titre",
+                    "label": "Titre",
+                    "name": "titre",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_hub_missions"
+                },
+                {
+                    "key": "field_cbs_gestion_hub_miss_texte",
+                    "label": "Texte court",
+                    "name": "texte",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2,
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_cbs_gestion_rep_hub_missions"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_hub_stat_1_value",
+            "label": "Hub — Stat 1 — valeur (grand)",
+            "name": "cbs_gestion_hub_stat_1_value",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_stat_1_label",
+            "label": "Hub — Stat 1 — libellé",
+            "name": "cbs_gestion_hub_stat_1_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_stat_2_value",
+            "label": "Hub — Stat 2 — valeur (grand)",
+            "name": "cbs_gestion_hub_stat_2_value",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_stat_2_label",
+            "label": "Hub — Stat 2 — libellé",
+            "name": "cbs_gestion_hub_stat_2_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_stat_3_value",
+            "label": "Hub — Stat 3 — valeur (grand)",
+            "name": "cbs_gestion_hub_stat_3_value",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_stat_3_label",
+            "label": "Hub — Stat 3 — libellé",
+            "name": "cbs_gestion_hub_stat_3_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_hub_split_image",
+            "label": "Hub — Image bloc SEO (colonne gauche, split)",
+            "name": "cbs_gestion_hub_split_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Vide = image Unsplash par défaut (intérieur spa). Retour URL.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_cbs_gestion_hub_seo_text",
+            "label": "Hub — Bloc SEO (texte sous le H2 fixe)",
+            "name": "cbs_gestion_hub_seo_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Paragraphe éditorial bas de page. Vide = texte par défaut du thème.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 8,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_tab_p",
+            "label": "Partielle — gestion-partielle",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_cbs_gestion_p_modele",
+            "label": "Partielle — Modèle (surtitre hero)",
+            "name": "cbs_gestion_p_modele",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_p_hero_title",
+            "label": "Partielle — Titre H1",
+            "name": "cbs_gestion_p_hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_p_position",
+            "label": "Partielle — Texte positionnement",
+            "name": "cbs_gestion_p_position",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Vide = texte par défaut (content-structure.md §4).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_gestion_rep_p_ca",
+            "label": "Partielle — Répartition CA (vide = tableau par défaut)",
+            "name": "cbs_gestion_p_ca",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter une ligne",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_p_ca_poste",
+                    "label": "Poste",
+                    "name": "poste",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_p_ca"
+                },
+                {
+                    "key": "field_cbs_gestion_p_ca_detail",
+                    "label": "Répartition",
+                    "name": "detail",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2,
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_cbs_gestion_rep_p_ca"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_p_mg",
+            "label": "Partielle — Missions gestionnaire",
+            "name": "cbs_gestion_p_missions_g",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Sous-champ « ligne ». Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_p_mg_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_p_mg"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_p_mh",
+            "label": "Partielle — Missions établissement",
+            "name": "cbs_gestion_p_missions_h",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_p_mh_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_p_mh"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_p_note",
+            "label": "Partielle — Note RDV",
+            "name": "cbs_gestion_p_note",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_p_cta_label",
+            "label": "Partielle — Libellé CTA",
+            "name": "cbs_gestion_p_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_tab_c",
+            "label": "Complète — gestion-complete",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_cbs_gestion_c_modele",
+            "label": "Complète — Modèle (surtitre hero)",
+            "name": "cbs_gestion_c_modele",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_c_hero_title",
+            "label": "Complète — Titre H1",
+            "name": "cbs_gestion_c_hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_c_position",
+            "label": "Complète — Texte positionnement",
+            "name": "cbs_gestion_c_position",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Vide = texte par défaut (§4).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_gestion_c_options_lead",
+            "label": "Complète — Intro bloc options financières",
+            "name": "cbs_gestion_c_options_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Vide = texte par défaut (modalités en RDV, deux modèles).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_c_option_a_title",
+            "label": "Complète — Option A — titre",
+            "name": "cbs_gestion_c_option_a_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_c_option_a_intro",
+            "label": "Complète — Option A — intro (« à partir de »)",
+            "name": "cbs_gestion_c_option_a_intro",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_rep_c_a",
+            "label": "Complète — Option A — lignes",
+            "name": "cbs_gestion_c_option_a_lignes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = contenu par défaut §4.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_c_a_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_c_a"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_c_option_b_title",
+            "label": "Complète — Option B — titre",
+            "name": "cbs_gestion_c_option_b_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_c_option_b_intro",
+            "label": "Complète — Option B — intro",
+            "name": "cbs_gestion_c_option_b_intro",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_rep_c_b",
+            "label": "Complète — Option B — lignes",
+            "name": "cbs_gestion_c_option_b_lignes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = contenu par défaut §4.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_c_b_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_c_b"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_c_note",
+            "label": "Complète — Note financière \/ RDV",
+            "name": "cbs_gestion_c_note",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_rep_c_rg",
+            "label": "Complète — Responsabilités gestionnaire",
+            "name": "cbs_gestion_c_resp_g",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_c_rg_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_c_rg"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_c_rh",
+            "label": "Complète — Responsabilités hôtel",
+            "name": "cbs_gestion_c_resp_h",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_c_rh_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_c_rh"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_c_cta_label",
+            "label": "Complète — Libellé CTA",
+            "name": "cbs_gestion_c_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_tab_staffing",
+            "label": "Staffing — staffing-spa",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_cbs_gestion_s_hero_title",
+            "label": "Staffing — Titre H1",
+            "name": "cbs_gestion_s_hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_s_hero_subtitle",
+            "label": "Staffing — Sous-titre hero",
+            "name": "cbs_gestion_s_hero_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_s_badge",
+            "label": "Staffing — Badge",
+            "name": "cbs_gestion_s_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_s_position",
+            "label": "Staffing — Positionnement",
+            "name": "cbs_gestion_s_position",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Vide = texte par défaut (content-structure.md §5).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_gestion_s_modele_h2",
+            "label": "Staffing — Titre section modèle",
+            "name": "cbs_gestion_s_modele_h2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Ex. Modèle tarifaire",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_s_modele_intro",
+            "label": "Staffing — Ligne modèle (collaboration \/ forfait)",
+            "name": "cbs_gestion_s_modele_intro",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_rep_s_modele",
+            "label": "Staffing — Lignes modèle tarifaire",
+            "name": "cbs_gestion_s_modele_lignes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut §5.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_s_ml_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_s_modele"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_s_mg",
+            "label": "Staffing — Missions gestionnaire",
+            "name": "cbs_gestion_s_missions_g",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_s_mg_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_s_mg"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_s_mh",
+            "label": "Staffing — Missions établissement",
+            "name": "cbs_gestion_s_missions_h",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_s_mh_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_s_mh"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_s_note",
+            "label": "Staffing — Note pilotage établissement",
+            "name": "cbs_gestion_s_note",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_s_cta_label",
+            "label": "Staffing — Libellé CTA",
+            "name": "cbs_gestion_s_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_tab_massages",
+            "label": "Massages — massages-en-chambre-hotel",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_cbs_gestion_m_hero_title",
+            "label": "Massages — Titre H1",
+            "name": "cbs_gestion_m_hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_m_hero_subtitle",
+            "label": "Massages — Sous-titre hero",
+            "name": "cbs_gestion_m_hero_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_gestion_m_badge",
+            "label": "Massages — Badge",
+            "name": "cbs_gestion_m_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_m_position",
+            "label": "Massages — Positionnement",
+            "name": "cbs_gestion_m_position",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Vide = texte par défaut (content-structure.md §6).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_gestion_m_modele_h2",
+            "label": "Massages — Titre section modèle",
+            "name": "cbs_gestion_m_modele_h2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_m_modele_intro",
+            "label": "Massages — Ligne modèle (collaboration \/ forfait)",
+            "name": "cbs_gestion_m_modele_intro",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_rep_m_modele",
+            "label": "Massages — Lignes modèle tarifaire",
+            "name": "cbs_gestion_m_modele_lignes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut §6.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_m_ml_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_m_modele"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_m_mg",
+            "label": "Massages — Missions gestionnaire",
+            "name": "cbs_gestion_m_missions_g",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_m_mg_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_m_mg"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_rep_m_mh",
+            "label": "Massages — Missions établissement",
+            "name": "cbs_gestion_m_missions_h",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Vide = liste par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_gestion_m_mh_ligne",
+                    "label": "Ligne",
+                    "name": "ligne",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_gestion_rep_m_mh"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_gestion_m_planif_title",
+            "label": "Massages — Titre section planification",
+            "name": "cbs_gestion_m_planif_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cbs_gestion_m_planif",
+            "label": "Massages — Texte planification fluide",
+            "name": "cbs_gestion_m_planif",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Vide = texte par défaut (extrait §6).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_gestion_m_cta_label",
+            "label": "Massages — Libellé CTA",
+            "name": "cbs_gestion_m_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_slug",
+                "operator": "==",
+                "value": "gestion-spa-hotelier"
+            }
+        ],
+        [
+            {
+                "param": "page_slug",
+                "operator": "==",
+                "value": "gestion-partielle"
+            }
+        ],
+        [
+            {
+                "param": "page_slug",
+                "operator": "==",
+                "value": "gestion-complete"
+            }
+        ],
+        [
+            {
+                "param": "page_slug",
+                "operator": "==",
+                "value": "staffing-spa"
+            }
+        ],
+        [
+            {
+                "param": "page_slug",
+                "operator": "==",
+                "value": "massages-en-chambre-hotel"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Champs pour le pôle Gestion (content-structure.md §4 à §6). Utiliser l’onglet correspondant à la page éditée.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1776110800
+}

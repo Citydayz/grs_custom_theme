@@ -1,0 +1,16 @@
+/*
+Theme Name: CBS Theme
+Theme URI: https://www.camillebecht.com/
+Author: Camille Becht
+Author URI: https://www.camillebecht.com/
+Description: Thème custom — Conseil & Gestion des rituels du spa. Sans page builder, sans thème parent.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cbs-theme
+*/
+
+/* Les styles sont chargés via assets/css/main.css (voir inc/enqueue.php). */

@@ -1,0 +1,119 @@
+/**
+ * CBS Theme — hero accueil (content-structure.md §2)
+ */
+
+.hero {
+	/* Surchargé en ligne par le template (URL poster ACF ou défaut). */
+	--cbs-hero-poster: url("../../images/hero-home.webp");
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: 85vh;
+	min-height: 85dvh;
+	padding-block: var(--cbs-space-24) var(--cbs-section-py);
+	padding-top: max(var(--cbs-space-24), 6rem);
+	margin-top: 0;
+	overflow: hidden;
+}
+
+.hero__media {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.hero__video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero__overlay {
+	position: absolute;
+	inset: 0;
+	background: var(--cbs-overlay-dark);
+	z-index: 1;
+}
+
+.hero__inner {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: var(--cbs-container-wide);
+	text-align: center;
+}
+
+.hero__kicker {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wide);
+	text-transform: uppercase;
+	color: var(--cbs-gold);
+	margin: 0 0 var(--cbs-space-6);
+}
+
+.hero__title {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-display);
+	font-weight: 400;
+	line-height: var(--cbs-leading-tight);
+	letter-spacing: var(--cbs-tracking-tight);
+	color: var(--cbs-white);
+	margin: 0 0 var(--cbs-space-6);
+	max-width: min(36rem, 100%);
+	margin-inline: auto;
+}
+
+.hero__subtitle {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-lead);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-100);
+	margin: 0 auto var(--cbs-space-10);
+	max-width: 40rem;
+}
+
+.hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--cbs-space-4);
+	justify-content: center;
+	align-items: center;
+}
+
+/* Contraste sur fond sombre : primaire en or, secondaire contour clair */
+.hero .hero__cta-primary {
+	background-color: var(--cbs-gold);
+	border-color: var(--cbs-gold);
+	color: var(--cbs-silver-900);
+}
+
+.hero .hero__cta-primary:hover {
+	background-color: var(--cbs-gold-dark);
+	border-color: var(--cbs-gold-dark);
+	color: var(--cbs-white);
+}
+
+.hero .hero__cta-secondary {
+	color: var(--cbs-white);
+	border-color: var(--cbs-gold);
+}
+
+.hero .hero__cta-secondary:hover {
+	background-color: var(--cbs-gold);
+	color: var(--cbs-silver-900);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero__video {
+		display: none;
+	}
+
+	.hero__media {
+		background-color: var(--cbs-silver-900);
+		background-image: var(--cbs-hero-poster);
+		background-size: cover;
+		background-position: center;
+	}
+}

@@ -1,0 +1,113 @@
+/**
+ * CBS Theme — tokens CSS (design-system.md §9)
+ * Toutes les variables du design system — aucun style appliqué ici.
+ */
+
+:root {
+	/* === COULEURS === */
+	/* Silver */
+	--cbs-silver-50: #f8f9fa;
+	--cbs-silver-100: #f1f3f5;
+	--cbs-silver-200: #dee2e6;
+	--cbs-silver-300: #ced4da;
+	--cbs-silver-400: #adb5bd;
+	--cbs-silver-500: #868e96;
+	--cbs-silver-600: #495057;
+	--cbs-silver-700: #343a40;
+	--cbs-silver-800: #212529;
+	--cbs-silver-900: #0d1117;
+
+	/* Or */
+	--cbs-gold-light: #e8e9eb;
+	--cbs-gold: #a8a9ad;
+	--cbs-gold-dark: #6b6c6f;
+	--cbs-gold-muted: #c8c9cb;
+
+	/* Neutres */
+	--cbs-white: #ffffff;
+	--cbs-black: #0a0a0a;
+	--cbs-dark: var(--cbs-silver-900);
+
+	/* Sémantiques */
+	--cbs-success: #2d6a4f;
+	--cbs-error: #c0392b;
+	--cbs-warning: #d4a017;
+	--cbs-info: #4a6fa5;
+
+	/* Pôles */
+	--cbs-pole-conseil-bg: var(--cbs-silver-900);
+	--cbs-pole-conseil-accent: var(--cbs-gold);
+	--cbs-pole-conseil-text: var(--cbs-white);
+	--cbs-pole-gestion-bg: var(--cbs-silver-50);
+	--cbs-pole-gestion-accent: var(--cbs-gold-dark);
+	--cbs-pole-gestion-text: var(--cbs-silver-800);
+
+	/* === TYPOGRAPHIE === */
+	--cbs-font-serif: "Cormorant Garamond", Georgia, serif;
+	--cbs-font-sans: "Montserrat", system-ui, sans-serif;
+
+	--cbs-text-display: clamp(3rem, 6vw, 5.5rem);
+	--cbs-text-h1: clamp(2.25rem, 4vw, 3.75rem);
+	--cbs-text-h2: clamp(1.75rem, 3vw, 2.75rem);
+	--cbs-text-h3: clamp(1.375rem, 2vw, 1.875rem);
+	--cbs-text-h4: clamp(1.125rem, 1.5vw, 1.375rem);
+	--cbs-text-lead: clamp(1.0625rem, 1.5vw, 1.25rem);
+	--cbs-text-body: 1rem;
+	--cbs-text-small: 0.875rem;
+	--cbs-text-xs: 0.75rem;
+
+	--cbs-leading-tight: 1.15;
+	--cbs-leading-snug: 1.3;
+	--cbs-leading-normal: 1.5;
+	--cbs-leading-relaxed: 1.7;
+
+	--cbs-tracking-tight: -0.02em;
+	--cbs-tracking-normal: 0em;
+	--cbs-tracking-wide: 0.08em;
+	--cbs-tracking-wider: 0.15em;
+
+	/* === ESPACEMENTS === */
+	--cbs-space-1: 0.25rem;
+	--cbs-space-2: 0.5rem;
+	--cbs-space-3: 0.75rem;
+	--cbs-space-4: 1rem;
+	--cbs-space-5: 1.25rem;
+	--cbs-space-6: 1.5rem;
+	--cbs-space-8: 2rem;
+	--cbs-space-10: 2.5rem;
+	--cbs-space-12: 3rem;
+	--cbs-space-16: 4rem;
+	--cbs-space-20: 5rem;
+	--cbs-space-24: 6rem;
+	--cbs-space-32: 8rem;
+
+	--cbs-section-py: clamp(4rem, 8vw, 8rem);
+	--cbs-section-px: clamp(1.5rem, 5vw, 4rem);
+	--cbs-container-max: 1280px;
+	--cbs-container-wide: 1440px;
+
+	/* === LAYOUT === */
+	--cbs-grid-cols: 12;
+	--cbs-grid-gap: clamp(1rem, 2.5vw, 2rem);
+
+	/* === EFFETS === */
+	--cbs-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+	--cbs-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+	--cbs-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.14);
+	--cbs-shadow-gold: 0 4px 24px rgba(168, 169, 173, 0.22);
+
+	--cbs-radius-sm: 4px;
+	--cbs-radius-md: 8px;
+	--cbs-radius-lg: 16px;
+	--cbs-radius-full: 9999px;
+
+	--cbs-divider-gold: 1px solid var(--cbs-gold-muted);
+	--cbs-overlay-dark: rgba(13, 17, 23, 0.55);
+	--cbs-overlay-silver: rgba(13, 17, 23, 0.35);
+
+	/* === TRANSITIONS === */
+	--cbs-transition-fast: 0.15s ease;
+	--cbs-transition-base: 0.25s ease;
+	--cbs-transition-slow: 0.4s ease;
+	--cbs-transition-reveal: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}

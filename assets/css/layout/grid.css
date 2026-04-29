@@ -1,0 +1,16 @@
+/**
+ * CBS Theme — container & grille (design-system.md §5)
+ */
+
+.cbs-container {
+	width: 100%;
+	max-width: var(--cbs-container-max);
+	margin-inline: auto;
+	padding-inline: var(--cbs-section-px);
+}
+
+.cbs-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--cbs-grid-cols), 1fr);
+	gap: var(--cbs-grid-gap);
+}

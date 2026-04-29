@@ -1,0 +1,254 @@
+{
+    "key": "group_cbs_page_qui_sommes_nous",
+    "title": "CBS — Qui sommes-nous",
+    "fields": [
+        {
+            "key": "field_cbs_qsn_bio",
+            "label": "Présentation — Camille Becht",
+            "name": "cbs_bio",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Bio et parcours terrain. Laisser vide pour afficher le marqueur [À COMPLÉTER] sur le site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_qsn_rep_chiffres",
+            "label": "Chiffres clés",
+            "name": "cbs_qsn_chiffres",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bandeau chiffres (valeur + libellé).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_cbs_qsn_chiffre_valeur",
+            "button_label": "Ajouter un chiffre",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_qsn_chiffre_valeur",
+                    "label": "Valeur",
+                    "name": "cbs_qsn_chiffre_valeur",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ex. +10, 5★, 13",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_qsn_rep_chiffres"
+                },
+                {
+                    "key": "field_cbs_qsn_chiffre_libelle",
+                    "label": "Libellé",
+                    "name": "cbs_qsn_chiffre_libelle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_qsn_rep_chiffres"
+                }
+            ]
+        },
+        {
+            "key": "field_cbs_qsn_valeurs",
+            "label": "Valeurs et positionnement",
+            "name": "cbs_qsn_valeurs",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Contenu détaillé à recueillir avec Camille. Vide = [À COMPLÉTER] sur le site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_qsn_academie_intro",
+            "label": "Texte — lien Académie",
+            "name": "cbs_qsn_academie_intro",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Paragraphe avant le bouton vers l’Académie des rituels spa.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_cbs_qsn_academie_url",
+            "label": "URL Académie",
+            "name": "cbs_qsn_academie_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Par défaut sur le site : https:\/\/academie-rituels-spa.fr\/",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/academie-rituels-spa.fr\/",
+            "placeholder": "https:\/\/academie-rituels-spa.fr\/"
+        },
+        {
+            "key": "field_cbs_qsn_rep_temoignages",
+            "label": "Témoignages clients",
+            "name": "cbs_qsn_temoignages",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_cbs_qsn_temoignage_texte",
+            "button_label": "Ajouter un témoignage",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_qsn_temoignage_texte",
+                    "label": "Texte",
+                    "name": "cbs_qsn_temoignage_texte",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 5,
+                    "placeholder": "",
+                    "new_lines": "wpautop",
+                    "parent_repeater": "field_cbs_qsn_rep_temoignages"
+                },
+                {
+                    "key": "field_cbs_qsn_temoignage_auteur",
+                    "label": "Auteur",
+                    "name": "cbs_qsn_temoignage_auteur",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_qsn_rep_temoignages"
+                },
+                {
+                    "key": "field_cbs_qsn_temoignage_etablissement",
+                    "label": "Établissement",
+                    "name": "cbs_qsn_temoignage_etablissement",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_qsn_rep_temoignages"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_slug",
+                "operator": "==",
+                "value": "qui-sommes-nous"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Page Qui sommes-nous — content-structure.md §9.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1775742336
+}

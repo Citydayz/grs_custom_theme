@@ -1,0 +1,268 @@
+/**
+ * CBS Theme — en-tête (navigation.md §2)
+ * Couleurs : tokens design-system (silver-900, gold, etc.).
+ */
+
+.site-header {
+	--cbs-header-bg: var(--cbs-silver-900);
+	--cbs-header-accent: var(--cbs-gold);
+	--cbs-header-border: var(--cbs-silver-800);
+	--cbs-header-muted: var(--cbs-silver-400);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	overflow: visible;
+	background-color: var(--cbs-header-bg);
+	color: var(--cbs-white);
+	border-bottom: 1px solid var(--cbs-header-border);
+	box-shadow: var(--cbs-shadow-lg);
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--cbs-space-5);
+	width: 100%;
+	max-width: min(100%, calc(var(--cbs-container-wide) + 3rem));
+	margin-inline: auto;
+	padding-inline: clamp(1rem, 4vw, 2rem);
+	min-height: 5rem;
+	overflow: visible;
+}
+
+.site-header__brand {
+	flex-shrink: 0;
+}
+
+.site-header__logo-link {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: var(--cbs-white);
+	transition: color 0.2s ease;
+}
+
+.site-header__logo-main {
+	font-family: var(--cbs-font-serif);
+	font-size: clamp(1.1rem, 1.94vw, 1.32rem);
+	line-height: var(--cbs-leading-tight);
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	transition: color 0.2s ease;
+}
+
+.site-header__logo-sub {
+	font-family: var(--cbs-font-sans);
+	font-size: clamp(0.5rem, 1.4vw, 0.6rem);
+	line-height: var(--cbs-leading-tight);
+	font-weight: 500;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: var(--cbs-header-muted);
+	transition: color 0.2s ease;
+}
+
+.site-header__logo-link:hover .site-header__logo-main,
+.site-header__logo-link:focus-visible .site-header__logo-main {
+	color: #c0c0c0;
+	transition: color 0.2s ease;
+}
+
+.site-header__logo-link:hover .site-header__logo-sub,
+.site-header__logo-link:focus-visible .site-header__logo-sub {
+	color: #c0c0c0;
+	transition: color 0.2s ease;
+}
+
+.site-header__logo-link:focus-visible {
+	outline: 2px solid var(--cbs-header-accent);
+	outline-offset: 4px;
+}
+
+.site-header__nav {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+	align-self: stretch;
+	overflow: visible;
+}
+
+.site-header__nav .nav {
+	height: 100%;
+	align-items: stretch;
+	overflow: visible;
+}
+
+.site-header__cta {
+	display: flex;
+	align-items: center;
+	gap: var(--cbs-space-6);
+	flex-shrink: 0;
+}
+
+.site-header__cta-rule {
+	display: none;
+	width: 1px;
+	height: 1rem;
+	flex-shrink: 0;
+	background-color: var(--cbs-header-border);
+}
+
+/* Aligné .btn-secondary (design-system) */
+.site-header__contact {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wide);
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--cbs-gold);
+	border: 1px solid var(--cbs-gold);
+	padding: var(--cbs-space-4) var(--cbs-space-8);
+	border-radius: var(--cbs-radius-sm);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition:
+		background-color var(--cbs-transition-base),
+		color var(--cbs-transition-base),
+		border-color var(--cbs-transition-base);
+}
+
+.site-header__contact:hover,
+.site-header__contact:focus-visible {
+	background-color: var(--cbs-gold);
+	color: var(--cbs-white);
+	border-color: var(--cbs-gold);
+}
+
+.site-header__contact:focus-visible {
+	outline: 2px solid var(--cbs-header-accent);
+	outline-offset: 2px;
+}
+
+/* ——— Navigation desktop (alignée référence Académie) ——— */
+@media (min-width: 1024px) {
+	.site-header__cta-rule {
+		display: block;
+	}
+
+	.site-header__nav .nav__menu {
+		height: 100%;
+		display: flex;
+		align-items: stretch;
+		max-width: 100%;
+		/* pas d’overflow ici : sinon les .nav__dropdown (position absolute) sont rognés */
+		overflow: visible;
+	}
+
+	.site-header .nav__list {
+		flex-wrap: nowrap;
+		align-items: stretch;
+		justify-content: center;
+		column-gap: clamp(1rem, 1.35vw, 1.75rem);
+		row-gap: 0;
+		height: 100%;
+		overflow: visible;
+	}
+
+	.site-header .nav__list > .nav__item {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+	}
+
+	.site-header .nav__list > .nav__item > .nav__link,
+	.site-header .nav__parent-row .nav__link--parent {
+		font-size: 0.6875rem;
+		font-weight: 300;
+		letter-spacing: 0.15em;
+		color: var(--cbs-white);
+		padding-block: 2rem;
+		padding-inline: 0;
+		border-bottom: none;
+		align-items: center;
+		white-space: nowrap;
+	}
+
+	.site-header .nav__parent-row .nav__submenu-toggle {
+		color: var(--cbs-white);
+		padding-block: 2rem;
+		padding-inline: 0;
+	}
+
+	.site-header .nav__link:hover,
+	.site-header .nav__link:focus-visible,
+	.site-header .nav__link[aria-current="page"],
+	.site-header .nav__link--parent:hover,
+	.site-header .nav__link--parent:focus-visible {
+		color: var(--cbs-header-accent);
+	}
+
+	.site-header .nav__parent-row .nav__submenu-toggle:hover .nav__chevron,
+	.site-header .nav__parent-row .nav__submenu-toggle:focus-visible .nav__chevron {
+		opacity: 1;
+	}
+
+	.site-header .nav__chevron {
+		width: 0.75rem;
+		height: 0.75rem;
+		opacity: 0.5;
+	}
+
+	.site-header .nav__dropdown {
+		top: 100%;
+		left: 0;
+		margin: 0;
+		padding-block: var(--cbs-space-4);
+		padding-inline: 0;
+		min-width: 16rem;
+		background-color: var(--cbs-header-bg);
+		border-radius: 0;
+		border: none;
+		border-top: 2px solid var(--cbs-header-accent);
+		box-shadow: var(--cbs-shadow-lg);
+	}
+
+	.site-header .nav__dropdown-link {
+		padding: var(--cbs-space-3) var(--cbs-space-6);
+		font-size: var(--cbs-text-small);
+		font-weight: 400;
+		border-radius: 0;
+		color: var(--cbs-silver-100);
+		text-transform: none;
+	}
+
+	.site-header .nav__dropdown-link:hover,
+	.site-header .nav__dropdown-link:focus-visible {
+		background-color: rgba(255, 255, 255, 0.05);
+		color: var(--cbs-header-accent);
+	}
+}
+
+@media (min-width: 1280px) {
+	.site-header .nav__list {
+		column-gap: clamp(1.25rem, 1.75vw, 2rem);
+	}
+
+	.site-header .nav__list > .nav__item > .nav__link,
+	.site-header .nav__parent-row .nav__link--parent,
+	.site-header .nav__parent-row .nav__submenu-toggle {
+		font-size: 0.75rem;
+	}
+}
+
+@media (max-width: 1023px) {
+	.site-header__nav {
+		align-self: center;
+	}
+
+	.site-header__nav .nav {
+		height: auto;
+		align-items: center;
+	}
+}

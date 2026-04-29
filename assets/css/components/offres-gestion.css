@@ -1,0 +1,639 @@
+/**
+ * CBS Theme — pages Pôle Gestion (content-structure.md §4)
+ */
+
+/* Badge géographique (hero hub) — reprend la logique .profile-card__badge (contraste AA) */
+.offre-gestion__badge--hero {
+	display: inline-block;
+	margin-top: var(--cbs-space-6);
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-xs);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wider);
+	text-transform: uppercase;
+	color: var(--cbs-gold-dark);
+	background-color: var(--cbs-gold-light);
+	padding: var(--cbs-space-2) var(--cbs-space-4);
+	border-radius: var(--cbs-radius-full);
+}
+
+.offre-gestion-ctas {
+	background-color: var(--cbs-silver-50);
+}
+
+.offre-gestion__cta-grid {
+	display: grid;
+	gap: var(--cbs-grid-gap);
+	grid-template-columns: 1fr;
+	max-width: 48rem;
+	margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+	.offre-gestion__cta-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.offre-gestion__cta-card {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: var(--cbs-space-4);
+	padding: var(--cbs-space-8);
+	background-color: var(--cbs-white);
+	border: 1px solid var(--cbs-silver-200);
+	border-radius: var(--cbs-radius-md);
+	box-shadow: var(--cbs-shadow-sm);
+	text-decoration: none;
+	color: inherit;
+	transition:
+		border-color var(--cbs-transition-base),
+		box-shadow var(--cbs-transition-base),
+		transform var(--cbs-transition-base);
+}
+
+.offre-gestion__cta-card:hover {
+	border-color: var(--cbs-gold-muted);
+	box-shadow: var(--cbs-shadow-gold);
+	transform: translateY(-2px);
+}
+
+.offre-gestion__cta-card:focus-visible {
+	outline: 2px solid var(--cbs-gold);
+	outline-offset: 4px;
+}
+
+.offre-gestion__cta-card-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--cbs-space-4);
+	width: 100%;
+}
+
+.offre-gestion__cta-card-label {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h4);
+	font-weight: 600;
+	color: var(--cbs-silver-900);
+}
+
+.offre-gestion__cta-card-si {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-600);
+	margin: 0;
+}
+
+.offre-gestion__link-si {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-600);
+	margin: var(--cbs-space-2) 0 0;
+}
+
+.offre-gestion__cta-card-arrow {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-lead);
+	color: var(--cbs-gold);
+}
+
+.offre-gestion-liens__inner {
+	max-width: 40rem;
+}
+
+.offre-gestion__link-list {
+	list-style: none;
+	margin: 0 0 var(--cbs-space-6);
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--cbs-space-3);
+}
+
+.offre-gestion__text-link {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	font-weight: 600;
+	color: var(--cbs-gold-dark);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+.offre-gestion__text-link:hover {
+	color: var(--cbs-gold);
+}
+
+.offre-gestion__text-link:focus-visible {
+	outline: 2px solid var(--cbs-gold);
+	outline-offset: 2px;
+}
+
+.offre-gestion__complement {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	color: var(--cbs-silver-500);
+	font-style: italic;
+	margin: 0;
+}
+
+.offre-gestion__position-text {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-700);
+}
+
+.offre-gestion__position-text p {
+	margin: 0 0 var(--cbs-space-4);
+}
+
+.offre-gestion__position-text p:last-child {
+	margin-bottom: 0;
+}
+
+.offre-gestion__modele-intro {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	font-weight: 600;
+	color: var(--cbs-silver-800);
+	margin: 0 0 var(--cbs-space-5);
+	line-height: var(--cbs-leading-relaxed);
+}
+
+.offre-gestion__modele-list {
+	margin-top: 0;
+}
+
+/* Encadré tableau CA / modèle tarifaire (fond clair + filet or) */
+.offre-gestion__ca-panel {
+	background-color: var(--cbs-silver-100);
+	padding: var(--cbs-space-8) var(--cbs-space-6);
+	border-left: 3px solid var(--cbs-gold);
+	border-radius: 0 var(--cbs-radius-md) var(--cbs-radius-md) 0;
+	max-width: var(--cbs-container-max);
+	margin-inline: auto;
+}
+
+.offre-gestion__ca-panel .offre-detail__h2:first-child {
+	margin-top: 0;
+}
+
+/* Tableau répartition CA */
+.offre-gestion__table-wrap {
+	overflow-x: auto;
+	border: 1px solid var(--cbs-silver-200);
+	border-radius: var(--cbs-radius-md);
+	background-color: var(--cbs-white);
+}
+
+.offre-gestion__table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+}
+
+.offre-gestion__table thead th {
+	text-align: left;
+	padding: var(--cbs-space-4) var(--cbs-space-5);
+	background-color: var(--cbs-silver-100);
+	color: var(--cbs-silver-800);
+	font-weight: 600;
+	letter-spacing: var(--cbs-tracking-wide);
+	text-transform: uppercase;
+	font-size: var(--cbs-text-xs);
+	border-bottom: 1px solid var(--cbs-silver-200);
+}
+
+.offre-gestion__table tbody th,
+.offre-gestion__table tbody td {
+	padding: var(--cbs-space-4) var(--cbs-space-5);
+	vertical-align: top;
+	border-bottom: 1px solid var(--cbs-silver-100);
+	color: var(--cbs-silver-700);
+	line-height: var(--cbs-leading-relaxed);
+}
+
+.offre-gestion__table tbody th {
+	font-weight: 600;
+	color: var(--cbs-silver-900);
+	width: 32%;
+	min-width: 10rem;
+}
+
+.offre-gestion__table tbody tr:last-child th,
+.offre-gestion__table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.offre-gestion__note-rdv {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	color: var(--cbs-silver-600);
+	margin-top: var(--cbs-space-6);
+	max-width: 40rem;
+	line-height: var(--cbs-leading-relaxed);
+}
+
+/* Missions / responsabilités — 2 colonnes */
+.offre-gestion__missions-grid {
+	display: grid;
+	gap: var(--cbs-space-10);
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion__missions-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--cbs-space-12);
+		align-items: start;
+	}
+}
+
+.offre-gestion__missions-title {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h3);
+	font-weight: 600;
+	color: var(--cbs-silver-900);
+	margin: 0 0 var(--cbs-space-5);
+}
+
+/* Options tarifaires — gestion complète */
+.offre-gestion__options-lead {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	color: var(--cbs-silver-600);
+	margin: calc(var(--cbs-space-2) * -1) 0 var(--cbs-space-8);
+	max-width: 40rem;
+}
+
+.offre-gestion__options-grid {
+	display: grid;
+	gap: var(--cbs-grid-gap);
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion__options-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.offre-gestion__option-card {
+	padding: var(--cbs-space-8);
+	background-color: var(--cbs-silver-50);
+	border: 1px solid var(--cbs-silver-200);
+	border-radius: var(--cbs-radius-md);
+}
+
+/* Options A/B — .phase-card sur fond offre-phases (gestion complète) */
+.offre-gestion-options.offre-phases .phase-card.offre-gestion__option-card {
+	background-color: var(--cbs-silver-800);
+	border-color: rgba(201, 168, 76, 0.25);
+}
+
+.offre-gestion-options.offre-phases .phase-card.offre-gestion__option-card:hover {
+	border-color: rgba(201, 168, 76, 0.45);
+	box-shadow: var(--cbs-shadow-gold);
+}
+
+.offre-gestion-options.offre-phases .phase-card.offre-gestion__option-card .phase-card__title {
+	color: var(--cbs-silver-100);
+}
+
+.offre-gestion-options.offre-phases .phase-card.offre-gestion__option-card .offre-gestion__option-intro {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	font-weight: 400;
+	color: var(--cbs-silver-300);
+	margin: 0 0 var(--cbs-space-4);
+	line-height: var(--cbs-leading-relaxed);
+}
+
+.offre-gestion-options.offre-phases .phase-card.offre-gestion__option-card .phase-card__list {
+	color: var(--cbs-silver-300);
+}
+
+.offre-gestion-options.offre-phases .phase-card.offre-gestion__option-card .phase-card__list li::before {
+	color: var(--cbs-gold);
+}
+
+.offre-gestion-options.offre-phases .offre-gestion__note-rdv {
+	color: var(--cbs-silver-400);
+	text-align: center;
+	max-width: 42rem;
+	margin-inline: auto;
+	margin-top: var(--cbs-space-10);
+	margin-bottom: 0;
+}
+
+.offre-gestion__option-title {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h4);
+	font-weight: 600;
+	color: var(--cbs-silver-900);
+	margin: 0 0 var(--cbs-space-4);
+}
+
+.offre-gestion__option-intro {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	font-weight: 600;
+	color: var(--cbs-silver-700);
+	margin: 0 0 var(--cbs-space-4);
+}
+
+.offre-gestion-final-cta .cta-rdv__inner {
+	text-align: center;
+}
+
+/* Hub — sections intermédiaires (profils, missions, chiffres, SEO) */
+.offre-gestion-hub-profiles {
+	background-color: var(--cbs-white);
+}
+
+.offre-gestion-hub-profiles__grid {
+	display: grid;
+	gap: var(--cbs-grid-gap);
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-hub-profiles__grid {
+		grid-template-columns: repeat(3, 1fr);
+		align-items: stretch;
+	}
+}
+
+.offre-gestion-hub-profiles__card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--cbs-space-3);
+	padding: var(--cbs-space-6);
+	background-color: var(--cbs-silver-50);
+	border: 1px solid var(--cbs-silver-200);
+	border-radius: var(--cbs-radius-md);
+	box-shadow: var(--cbs-shadow-sm);
+}
+
+@media (min-width: 640px) {
+	.offre-gestion-hub-profiles__card {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: var(--cbs-space-5);
+	}
+}
+
+.offre-gestion-hub-profiles__card-title {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h4);
+	font-weight: 600;
+	color: var(--cbs-silver-900);
+	margin: 0;
+	line-height: var(--cbs-leading-snug);
+}
+
+@media (min-width: 640px) {
+	.offre-gestion-hub-profiles__card-title {
+		flex: 0 0 38%;
+		max-width: 11rem;
+	}
+}
+
+.offre-gestion-hub-profiles__card-text {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-600);
+	margin: 0;
+}
+
+@media (min-width: 640px) {
+	.offre-gestion-hub-profiles__card-text {
+		flex: 1;
+	}
+}
+
+.offre-gestion-hub-missions {
+	background-color: var(--cbs-white);
+}
+
+.offre-gestion-hub-missions__grid {
+	display: grid;
+	gap: var(--cbs-space-6);
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+	.offre-gestion-hub-missions__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.offre-gestion-hub-missions__grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--cbs-space-8);
+	}
+}
+
+.offre-gestion-hub-mission {
+	padding: var(--cbs-space-6);
+	border: 1px solid var(--cbs-silver-200);
+	border-radius: var(--cbs-radius-md);
+	background-color: var(--cbs-silver-50);
+}
+
+.offre-gestion-hub-mission__icon {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: var(--cbs-space-4);
+	color: var(--cbs-gold);
+}
+
+.offre-gestion-hub-mission__icon svg {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+.offre-gestion-hub-mission__title {
+	font-family: var(--cbs-font-serif);
+	font-size: max(1rem, var(--cbs-text-body));
+	font-weight: 600;
+	color: var(--cbs-silver-900);
+	margin: 0 0 var(--cbs-space-2);
+	line-height: var(--cbs-leading-snug);
+}
+
+.offre-gestion-hub-mission__text {
+	font-family: var(--cbs-font-sans);
+	font-size: max(0.95rem, var(--cbs-text-small));
+	line-height: 1.7;
+	color: var(--cbs-silver-600);
+	margin: 0;
+}
+
+.offre-gestion-hub-stats {
+	background-color: var(--cbs-silver-900);
+	padding-block: var(--cbs-space-12);
+}
+
+.offre-gestion-hub-stats__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: var(--cbs-space-10);
+	grid-template-columns: 1fr;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-hub-stats__list {
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--cbs-space-8);
+		align-items: start;
+	}
+}
+
+.offre-gestion-hub-stats__item {
+	margin: 0;
+}
+
+.offre-gestion-hub-stats__value {
+	font-family: var(--cbs-font-serif);
+	font-size: clamp(3.5rem, 7vw, 4rem);
+	font-weight: 600;
+	line-height: var(--cbs-leading-tight);
+	color: var(--cbs-gold);
+	margin: 0 0 var(--cbs-space-3);
+}
+
+.offre-gestion-hub-stats__label {
+	font-family: var(--cbs-font-sans);
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: var(--cbs-silver-300);
+	margin: 0;
+}
+
+/* Bloc SEO hub — split image portrait / texte (aligné sur .cbs-container) */
+.offre-gestion-hub-seo--split {
+	background-color: var(--cbs-silver-100);
+}
+
+.offre-gestion-hub-seo__split {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: var(--cbs-space-8);
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-hub-seo__split {
+		flex-direction: row;
+		align-items: center;
+		gap: 0;
+	}
+}
+
+.offre-gestion-hub-seo__media {
+	position: relative;
+	width: 100%;
+	flex: 0 0 auto;
+	margin-inline: auto;
+	aspect-ratio: 3 / 4;
+	overflow: hidden;
+	background-color: var(--cbs-silver-200);
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-hub-seo__media {
+		flex: 0 0 50%;
+		width: 50%;
+		max-width: none;
+		margin-inline: 0;
+	}
+}
+
+.offre-gestion-hub-seo__img {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.offre-gestion-hub-seo__content {
+	background-color: transparent;
+	padding: 0 var(--cbs-space-6) var(--cbs-space-6);
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 0;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-hub-seo__content {
+		flex: 0 0 50%;
+		width: 50%;
+		padding: var(--cbs-space-10) var(--cbs-space-6) var(--cbs-space-10) max(2rem, var(--cbs-space-10));
+	}
+}
+
+.offre-gestion-hub-seo__title {
+	margin-top: 0;
+	margin-bottom: var(--cbs-space-6);
+	text-align: left;
+	color: var(--cbs-silver-900);
+}
+
+.offre-gestion-hub-seo__text {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: 1.8;
+	color: var(--cbs-silver-800);
+	text-align: justify;
+	hyphens: auto;
+}
+
+.offre-gestion-hub-seo__text p {
+	margin: 0 0 var(--cbs-space-4);
+	text-align: justify;
+}
+
+.offre-gestion-hub-seo__text p:last-child {
+	margin-bottom: 0;
+}
+
+.offre-gestion-hub-seo__more-wrap {
+	margin: var(--cbs-space-4) 0 0;
+	text-align: left;
+}
+
+.offre-gestion-hub-seo__more {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	font-weight: 500;
+	color: var(--cbs-silver-500);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+	text-align: left;
+}
+
+.offre-gestion-hub-seo__more:hover {
+	color: var(--cbs-gold-dark);
+}
+
+.offre-gestion-hub-seo__more:focus-visible {
+	outline: 2px solid var(--cbs-gold);
+	outline-offset: 2px;
+}

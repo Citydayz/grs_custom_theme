@@ -1,0 +1,20 @@
+/**
+ * CBS Theme — feuille principale
+ * @import autorisés ici uniquement (voir wordpress-theme.md).
+ * Ordre : reset → tokens → typography → components → layout
+ */
+
+@import url("base/reset.css");
+@import url("base/tokens.css");
+@import url("base/typography.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/offres-conseil.css");
+@import url("components/offres-gestion.css");
+@import url("components/forms.css");
+@import url("components/nav.css");
+@import url("components/hero.css");
+@import url("components/tunnel.css");
+@import url("layout/grid.css");
+@import url("layout/header.css");
+@import url("layout/footer.css");
