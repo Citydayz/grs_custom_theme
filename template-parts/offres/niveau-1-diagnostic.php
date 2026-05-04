@@ -15,6 +15,9 @@ $hero_kicker   = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 
 $hero_title    = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_offres_n1_hero_title', $pid ), $d['hero_title'] ) : $d['hero_title'];
 $hero_subtitle = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_offres_n1_hero_subtitle', $pid ), $d['hero_subtitle'] ) : $d['hero_subtitle'];
 
+$accroche_text = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_diag_accroche', $pid ), $d['accroche_text'] ?? '' ) : ( $d['accroche_text'] ?? '' );
+$accroche_sub  = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_diag_accroche_sub', $pid ), $d['accroche_sub'] ?? '' ) : ( $d['accroche_sub'] ?? '' );
+
 $prestations = function_exists( 'get_field' )
 	? cbs_offres_repeater_lignes( get_field( 'cbs_offres_n1_prestations', $pid ), $d['prestations'] )
 	: $d['prestations'];
@@ -26,9 +29,14 @@ $resultat  = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs
 $prestations_intro = function_exists( 'get_field' )
 	? cbs_offres_scalar( get_field( 'cbs_offres_n1_prestations_intro', $pid ), $d['prestations_intro'] )
 	: $d['prestations_intro'];
-$pour_qui = function_exists( 'get_field' )
-	? cbs_offres_repeater_lignes( get_field( 'cbs_offres_n1_pour_qui', $pid ), $d['pour_qui'] )
-	: $d['pour_qui'];
+
+$d_prof = cbs_offres_niveau_1_profiles_defaults();
+$profiles_raw = function_exists( 'get_field' ) ? get_field( 'cbs_diag_profiles', $pid ) : null;
+$profiles = ( is_array( $profiles_raw ) && $profiles_raw !== array() ) ? $profiles_raw : $d_prof;
+
+$seo_image = function_exists( 'get_field' ) ? cbs_offres_acf_image_url( get_field( 'cbs_diag_seo_image', $pid ), $d['seo_image'] ?? '' ) : ( $d['seo_image'] ?? '' );
+$seo_text  = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_diag_seo_text', $pid ), $d['seo_text'] ?? '' ) : ( $d['seo_text'] ?? '' );
+
 $cta_label = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_offres_n1_cta_label', $pid ), $d['cta_label'] ) : $d['cta_label'];
 
 $temoignages = function_exists( 'get_field' ) ? get_field( 'cbs_offres_n1_temoignages', $pid ) : null;
@@ -40,14 +48,38 @@ $n1_prestation_svgs = array(
 	4 => '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
 	5 => '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
 );
+
+$hero_bg = '';
+if ( has_post_thumbnail() ) {
+	$thumb_url = get_the_post_thumbnail_url( null, 'full' );
+	if ( is_string( $thumb_url ) && $thumb_url !== '' ) {
+		$hero_bg = ' style="background-image: url(\'' . esc_url( $thumb_url ) . '\');"';
+	}
+}
 ?>
-<section class="methode-spa-hero methode-spa-hero--compact cbs-section" aria-labelledby="n1-hero-heading">
+<section class="methode-spa-hero n1-hero cbs-section" aria-labelledby="n1-hero-heading"<?php echo $hero_bg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_url(). ?>>
 	<div class="methode-spa-hero__inner cbs-container">
 		<p class="methode-spa-hero__kicker"><?php echo esc_html( $hero_kicker ); ?></p>
 		<h1 id="n1-hero-heading" class="methode-spa-hero__title"><?php echo esc_html( $hero_title ); ?></h1>
 		<p class="methode-spa-hero__subtitle"><?php echo esc_html( $hero_subtitle ); ?></p>
 	</div>
 </section>
+
+<?php if ( $accroche_text !== '' || $accroche_sub !== '' ) : ?>
+<section class="cbs-section n1-accroche diag-accroche" aria-label="<?php esc_attr_e( 'Accroche', 'cbs-theme' ); ?>">
+	<div class="cbs-container diag-accroche__inner">
+		<?php if ( $accroche_text !== '' ) : ?>
+			<p class="n1-accroche__text"><?php echo nl2br( esc_html( $accroche_text ) ); ?></p>
+		<?php endif; ?>
+		<?php if ( $accroche_text !== '' && $accroche_sub !== '' ) : ?>
+			<div class="n1-accroche__sep" aria-hidden="true"></div>
+		<?php endif; ?>
+		<?php if ( $accroche_sub !== '' ) : ?>
+			<div class="n1-accroche__sub"><?php echo wp_kses_post( wpautop( $accroche_sub ) ); ?></div>
+		<?php endif; ?>
+	</div>
+</section>
+<?php endif; ?>
 
 <section class="offre-phases" aria-labelledby="n1-prestations-heading">
 	<div class="offre-phases__inner">
@@ -78,74 +110,103 @@ $n1_prestation_svgs = array(
 	</div>
 </section>
 
-<section class="cbs-section offre-detail" aria-labelledby="n1-livrables-heading">
-	<div class="cbs-container offre-detail__inner">
-		<div class="testimonial-card">
-			<h2 id="n1-livrables-heading" class="offre-detail__h2"><?php esc_html_e( 'Livrables', 'cbs-theme' ); ?></h2>
-			<ul class="offre-detail__list">
+<section class="cbs-section n1-livrables-section" aria-labelledby="n1-livrables-heading">
+	<div class="cbs-container n1-livrables-split">
+		<div class="n1-livrables-split__left">
+			<h2 id="n1-livrables-heading" class="n1-livrables-split__h2"><?php esc_html_e( 'Livrables', 'cbs-theme' ); ?></h2>
+			<ul class="n1-livrables-list">
 				<?php foreach ( $livrables as $line ) : ?>
 					<li><?php echo esc_html( $line ); ?></li>
 				<?php endforeach; ?>
 			</ul>
 		</div>
-
-		<h2 class="offre-detail__h2"><?php esc_html_e( 'Résultat', 'cbs-theme' ); ?></h2>
-		<div class="offre-detail__lead offre-detail__lead--rich"><?php echo wp_kses_post( wpautop( $resultat ) ); ?></div>
+		<div class="n1-livrables-split__right">
+			<h2 class="n1-livrables-split__h2"><?php esc_html_e( 'Ce que vous repartez avec', 'cbs-theme' ); ?></h2>
+			<div class="n1-livrables-split__lead"><?php echo wp_kses_post( wpautop( $resultat ) ); ?></div>
+		</div>
 	</div>
 </section>
 
-<?php if ( is_array( $pour_qui ) && $pour_qui !== array() ) : ?>
-<section class="cbs-section offre-detail" aria-labelledby="n1-pour-qui-heading">
-	<div class="cbs-container offre-detail__inner">
-		<h2 id="n1-pour-qui-heading" class="offre-detail__h2"><?php esc_html_e( 'Pour qui ?', 'cbs-theme' ); ?></h2>
-		<ul class="offre-detail__list">
-			<?php foreach ( $pour_qui as $profil ) : ?>
-				<li><?php echo esc_html( (string) $profil ); ?></li>
+<?php if ( is_array( $profiles ) && $profiles !== array() ) : ?>
+<section class="cbs-section n1-profiles-section" aria-labelledby="n1-pour-qui-heading" style="background-color: var(--cbs-silver-900);">
+	<div class="cbs-container">
+		<h2 id="n1-pour-qui-heading" class="n1-profiles-section__h2"><?php esc_html_e( 'Cette mission est faite pour vous si…', 'cbs-theme' ); ?></h2>
+		<div class="perf-profiles-grid">
+			<?php foreach ( $profiles as $profil ) : ?>
+				<?php
+				$p_title = isset( $profil['titre'] ) ? (string) $profil['titre'] : ( is_string( $profil ) ? $profil : '' );
+				$p_text  = isset( $profil['texte'] ) ? (string) $profil['texte'] : '';
+				if ( $p_title === '' && $p_text === '' ) {
+					continue;
+				}
+				?>
+				<article class="perf-profile-card perf-profile-card--dark">
+					<?php if ( $p_title !== '' ) : ?>
+						<h3 class="perf-profile-card__title"><?php echo esc_html( $p_title ); ?></h3>
+					<?php endif; ?>
+					<?php if ( $p_text !== '' ) : ?>
+						<p class="perf-profile-card__text"><?php echo esc_html( $p_text ); ?></p>
+					<?php endif; ?>
+				</article>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<section class="perf-seo">
+	<div class="cbs-container perf-seo__inner">
+		<div class="perf-seo__content">
+			<h2 class="methode-hub-moa__title"><?php esc_html_e( 'Diagnostic spa hôtelier : poser les bonnes fondations', 'cbs-theme' ); ?></h2>
+			<div class="methode-hub-moa__text">
+				<?php echo wp_kses_post( wpautop( $seo_text ) ); ?>
+			</div>
+		</div>
+		<div class="perf-seo__media">
+			<?php if ( $seo_image !== '' ) : ?>
+				<img class="perf-seo__img" src="<?php echo esc_url( $seo_image ); ?>" alt="" loading="lazy">
+			<?php endif; ?>
+		</div>
+	</div>
+</section>
+
+<?php if ( is_array( $temoignages ) && $temoignages !== array() ) : ?>
+<section class="cbs-section offre-temoignages" aria-labelledby="n1-temoignages-heading">
+	<div class="cbs-container">
+		<h2 id="n1-temoignages-heading" class="offre-detail__h2"><?php esc_html_e( 'Témoignages', 'cbs-theme' ); ?></h2>
+		<ul class="testimonial-list">
+			<?php foreach ( $temoignages as $t ) : ?>
+				<?php
+				if ( ! is_array( $t ) ) {
+					continue;
+				}
+				$txt = isset( $t['cbs_offres_temoignage_texte'] ) ? (string) $t['cbs_offres_temoignage_texte'] : '';
+				if ( $txt === '' ) {
+					continue;
+				}
+				$aut = isset( $t['cbs_offres_temoignage_auteur'] ) ? (string) $t['cbs_offres_temoignage_auteur'] : '';
+				$eta = isset( $t['cbs_offres_temoignage_etablissement'] ) ? (string) $t['cbs_offres_temoignage_etablissement'] : '';
+				?>
+				<li>
+					<figure class="testimonial-card">
+						<blockquote class="testimonial-card__quote">
+							<p><?php echo wp_kses_post( wpautop( $txt ) ); ?></p>
+						</blockquote>
+						<figcaption class="testimonial-card__footer">
+							<?php if ( $aut !== '' ) : ?>
+								<cite class="testimonial-card__author"><?php echo esc_html( $aut ); ?></cite>
+							<?php endif; ?>
+							<?php if ( $eta !== '' ) : ?>
+								<span class="testimonial-card__role"><?php echo esc_html( $eta ); ?></span>
+							<?php endif; ?>
+						</figcaption>
+					</figure>
+				</li>
 			<?php endforeach; ?>
 		</ul>
 	</div>
 </section>
 <?php endif; ?>
-
-<section class="cbs-section offre-temoignages" aria-labelledby="n1-temoignages-heading">
-	<div class="cbs-container">
-		<h2 id="n1-temoignages-heading" class="offre-detail__h2"><?php esc_html_e( 'Témoignages', 'cbs-theme' ); ?></h2>
-		<?php if ( is_array( $temoignages ) && $temoignages !== array() ) : ?>
-			<ul class="testimonial-list">
-				<?php foreach ( $temoignages as $t ) : ?>
-					<?php
-					if ( ! is_array( $t ) ) {
-						continue;
-					}
-					$txt = isset( $t['cbs_offres_temoignage_texte'] ) ? (string) $t['cbs_offres_temoignage_texte'] : '';
-					if ( $txt === '' ) {
-						continue;
-					}
-					$aut = isset( $t['cbs_offres_temoignage_auteur'] ) ? (string) $t['cbs_offres_temoignage_auteur'] : '';
-					$eta = isset( $t['cbs_offres_temoignage_etablissement'] ) ? (string) $t['cbs_offres_temoignage_etablissement'] : '';
-					?>
-					<li>
-						<figure class="testimonial-card">
-							<blockquote class="testimonial-card__quote">
-								<p><?php echo wp_kses_post( wpautop( $txt ) ); ?></p>
-							</blockquote>
-							<figcaption class="testimonial-card__footer">
-								<?php if ( $aut !== '' ) : ?>
-									<cite class="testimonial-card__author"><?php echo esc_html( $aut ); ?></cite>
-								<?php endif; ?>
-								<?php if ( $eta !== '' ) : ?>
-									<span class="testimonial-card__role"><?php echo esc_html( $eta ); ?></span>
-								<?php endif; ?>
-							</figcaption>
-						</figure>
-					</li>
-				<?php endforeach; ?>
-			</ul>
-		<?php else : ?>
-			<p class="offre-placeholder"><?php esc_html_e( '[À COMPLÉTER] — Témoignages clients (cf. content-structure.md §12).', 'cbs-theme' ); ?></p>
-		<?php endif; ?>
-	</div>
-</section>
 
 <section class="cbs-section cta-rdv" aria-labelledby="n1-cta-heading">
 	<div class="cbs-container cta-rdv__inner">

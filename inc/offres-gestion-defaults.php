@@ -101,7 +101,7 @@ function cbs_gestion_hub_stats_default(): array {
 		),
 		array(
 			'value' => __( 'Alsace', 'cbs-theme' ),
-			'label' => __( 'Zone d\'intervention : gestion en Alsace — conseil sur la France entière', 'cbs-theme' ),
+			'label' => __( 'Zone d\'intervention : gestion en Alsace, conseil sur la France entière', 'cbs-theme' ),
 		),
 	);
 }
@@ -241,7 +241,7 @@ function cbs_gestion_partielle_ca_default(): array {
 	return array(
 		array(
 			'poste'  => __( 'Prestations de soins', 'cbs-theme' ),
-			'detail' => __( '15 % pour l\'établissement / 85 % pour le gestionnaire (ou base tarifaire fixe fournie par CB, l\'hôtel applique sa marge)', 'cbs-theme' ),
+			'detail' => __( '15 % pour l\'établissement / 85 % pour le gestionnaire (ou base tarifaire fixe fournie par Gestion des Rituels du Spa, l\'hôtel applique sa marge)', 'cbs-theme' ),
 		),
 		array(
 			'poste'  => __( 'Vente de produits', 'cbs-theme' ),
@@ -300,10 +300,10 @@ function cbs_gestion_partielle_missions_etab_default(): array {
  */
 function cbs_gestion_partielle_defaults(): array {
 	return array(
-		'modele'     => __( 'Gestion mixte — rémunération par commissions', 'cbs-theme' ),
-		'hero_title' => __( 'Gestion externalisée partielle — Modèle hybride', 'cbs-theme' ),
-		'position'   => __( "Vous conservez le pilotage de votre hôtel. J'apporte l'expertise spa, les praticiens qualifiés et la stratégie commerciale. Un partenariat flexible, sans restructuration de vos équipes.\n\nLe changement de partenaire est simple et fluide — aucun risque opérationnel pour votre établissement.", 'cbs-theme' ),
-		'note_rdv'   => __( 'Les conditions financières sont transmises en rendez-vous — pas de tarifs publics.', 'cbs-theme' ),
+		'modele'     => __( 'Gestion mixte, rémunération par commissions', 'cbs-theme' ),
+		'hero_title' => __( 'Gestion externalisée partielle, modèle hybride', 'cbs-theme' ),
+		'position'   => __( "Vous conservez le pilotage de votre hôtel. J'apporte l'expertise spa, les praticiens qualifiés et la stratégie commerciale. Un partenariat flexible, sans restructuration de vos équipes.\n\nLe changement de partenaire est simple et fluide, sans risque opérationnel pour votre établissement.", 'cbs-theme' ),
+		'note_rdv'   => __( 'Les conditions financières sont transmises en rendez-vous, pas de tarifs publics.', 'cbs-theme' ),
 		'cta_label'  => __( 'Discuter de ce modèle', 'cbs-theme' ),
 	);
 }
@@ -369,12 +369,12 @@ function cbs_gestion_complete_resp_hotel_default(): array {
 function cbs_gestion_complete_defaults(): array {
 	return array(
 		'modele'          => __( 'Forfait mensuel + commission variable', 'cbs-theme' ),
-		'hero_title'      => __( 'Gestion externalisée complète — Tranquillité absolue', 'cbs-theme' ),
-		'position'        => __( 'Tranquillité absolue. Je gère l\'intégralité de l\'activité spa — équipes, planning, qualité, CA, stocks — pendant que vous vous concentrez sur votre hôtel.', 'cbs-theme' ),
+		'hero_title'      => __( 'Gestion externalisée complète, tranquillité absolue', 'cbs-theme' ),
+		'position'        => __( 'Tranquillité absolue. Je gère l\'intégralité de l\'activité spa, des équipes et du planning à la qualité, au CA et aux stocks, pendant que vous vous concentrez sur votre hôtel.', 'cbs-theme' ),
 		'options_lead'    => __( 'Les modalités financières sont définies ensemble en rendez-vous selon votre situation. Deux modèles existent pour s\'adapter à votre structure.', 'cbs-theme' ),
-		'option_a_title'  => __( 'Option A — avec loyer', 'cbs-theme' ),
+		'option_a_title'  => __( 'Option A, avec loyer', 'cbs-theme' ),
 		'option_a_intro'  => __( 'À partir des éléments suivants (détail en rendez-vous) :', 'cbs-theme' ),
-		'option_b_title'  => __( 'Option B — sans loyer', 'cbs-theme' ),
+		'option_b_title'  => __( 'Option B, sans loyer', 'cbs-theme' ),
 		'option_b_intro'  => __( 'À partir des taux suivants (ajustables en rendez-vous) :', 'cbs-theme' ),
 		'note_finance'    => __( 'Les conditions financières sont transmises en rendez-vous. Les montants et taux affichés sont indicatifs ; le détail du contrat est défini lors de l\'échange.', 'cbs-theme' ),
 		'cta_label'       => __( 'Discuter de ce modèle', 'cbs-theme' ),
@@ -450,14 +450,23 @@ function cbs_gestion_complete_resp_headings(): array {
  */
 function cbs_gestion_staffing_defaults(): array {
 	return array(
-		'hero_title'    => __( 'Staffing & Renfort d\'équipe — L\'Intérim de luxe', 'cbs-theme' ),
-		'hero_subtitle' => __( 'Des praticiens qualifiés, vérifiés, conformes — disponibles quand vous en avez besoin.', 'cbs-theme' ),
+		'hero_title'    => __( 'Staffing & Renfort d\'équipe, l\'intérim de luxe', 'cbs-theme' ),
+		'hero_subtitle' => __( 'Des praticiens qualifiés, vérifiés, conformes, disponibles quand vous en avez besoin.', 'cbs-theme' ),
 		'badge'         => __( 'Alsace uniquement', 'cbs-theme' ),
-		'position'      => __( "Besoin d'un praticien qualifié demain matin ? Mon réseau de professionnels certifiés, vérifiés et conformes est disponible à la demande. Sans alourdir votre structure RH.\n\nChaque praticien est suivi administrativement et réglementairement. Vous intervenez sur la prestation — je gère la conformité.", 'cbs-theme' ),
-		'modele_label'  => __( 'Collaboration exclusive — rémunération au forfait', 'cbs-theme' ),
+		'position'      => __( "Besoin d'un praticien qualifié demain matin ? Mon réseau de professionnels certifiés, vérifiés et conformes est disponible à la demande. Sans alourdir votre structure RH.\n\nChaque praticien est suivi administrativement et réglementairement. Vous intervenez sur la prestation. Je gère la conformité.", 'cbs-theme' ),
+		'modele_label'  => __( 'Collaboration exclusive, rémunération au forfait', 'cbs-theme' ),
 		'modele_h2'     => __( 'Modèle tarifaire', 'cbs-theme' ),
 		'note_pilotage' => __( 'L\'établissement conserve le pilotage.', 'cbs-theme' ),
 		'cta_label'     => __( 'Nous contacter', 'cbs-theme' ),
+
+		'positionnement_image_fallback' => 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80',
+		'seo_staffing_h2_fallback'        => __( 'Staffing spa hôtelier en Alsace', 'cbs-theme' ),
+
+		'seo_staffing_body_fallback'      => __( "Le staffing spa hôtelier en Alsace prend tout son sens lorsqu'un palace ou un resort doit tenir ses promesses d'excellence sans briser un planning déjà sous tension. Dans ce contexte exigeant, fournir un praticien spa qualifié, à l'aise avec le luxe comme avec la précision gestuelle attendue dans la cabine, devient stratégique : le client doit sentir une continuité parfaite, du premier contact à la proposition de soins. L'intérim spa luxe répond précisément à ces fenêtres d'occupation forte, aux absences non planifiées ou aux projets saisonniers, sans passer par une annonce longue et coûteuse.\n\nChaque renfort équipe spa hôtel Alsace s'articule autour du profil défini ensemble : niveau linguistique, sens du détail vestimentaire, maîtrise des protocoles et respect des usages internes qui font votre différence concurrentielle. Avant mise à disposition, les habilitations, assurances et règles d'hygiène sont confrontées aux normes locales : la conformité réglementaire ne relève alors plus d'une charge diffuse pour vos équipes RH, puisqu'un cadre vérifiant accompagne déjà les intervenants. Un praticien certifié spa, habitué au rythme d'un établissement quatre ou cinq étoiles, sait prendre ses marques sans retarder vos flux opérationnels. Vous préservez ainsi la maîtrise de carte, de tarifs, de réservation et d'animation commerciale, tout en apportant sur le lit de massage une présence impeccable, signe tangible de votre niveau premium.", 'cbs-theme' ),
+
+		'seo_staffing_image_fallback'     => 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+
+		'modele_vous_gardez_text'         => __( 'Vous intervenez sur la prestation. Je gère la conformité administrative et réglementaire de chaque praticien.', 'cbs-theme' ),
 	);
 }
 
@@ -466,8 +475,8 @@ function cbs_gestion_staffing_defaults(): array {
  */
 function cbs_gestion_staffing_modele_lignes_default(): array {
 	return array(
-		__( 'Prestations de soins : base tarifaire fixe fournie par CB, l\'hôtel applique sa marge', 'cbs-theme' ),
-		__( 'Achat de la marque par l\'hôtel / rémunération ventes praticiens externes : 15% facturé par CB', 'cbs-theme' ),
+		__( 'Prestations de soins : base tarifaire fixe fournie par Gestion des Rituels du Spa, l\'hôtel applique sa marge', 'cbs-theme' ),
+		__( 'Achat de la marque par l\'hôtel / rémunération ventes praticiens externes : 15% facturé par Gestion des Rituels du Spa', 'cbs-theme' ),
 		__( 'Day Spa : 100% établissement', 'cbs-theme' ),
 		__( 'Extras : 100% établissement', 'cbs-theme' ),
 	);
@@ -515,14 +524,24 @@ function cbs_gestion_staffing_missions_headings(): array {
  */
 function cbs_gestion_massages_defaults(): array {
 	return array(
-		'hero_title'       => __( 'Massages en chambre — Service premium clés en main', 'cbs-theme' ),
+		'hero_title'       => __( 'Massages en chambre, service premium clés en main', 'cbs-theme' ),
 		'hero_subtitle'    => __( 'Proposez des massages haut de gamme à vos clients, sans infrastructure spa dédiée.', 'cbs-theme' ),
 		'badge'            => __( 'Alsace uniquement', 'cbs-theme' ),
 		'position'         => __( 'Proposez une expérience bien-être haut de gamme à vos clients sans infrastructure spa dédiée. Un service clés en main, disponible sur réservation, avec des praticiens qui véhiculent l\'image premium de votre établissement.', 'cbs-theme' ),
-		'modele_label'     => __( 'Collaboration exclusive — rémunération au forfait', 'cbs-theme' ),
+		'modele_label'     => __( 'Collaboration exclusive, rémunération au forfait', 'cbs-theme' ),
 		'modele_h2'        => __( 'Modèle tarifaire', 'cbs-theme' ),
 		'planif_title'     => __( 'Système de planification fluide', 'cbs-theme' ),
-		'planif_text'      => __( 'Un système de planification fluide et une assistance téléphonique dédiée — zéro friction pour votre équipe réception.', 'cbs-theme' ),
+		'planif_text'      => __( "La réservation repose sur un système intégré où créneaux, confirmations et historique restent lisibles dans une vue unique qui peut s\'aligner avec votre organisation habituelle. Une assistance téléphonique dédiée encadre vos hôtes : prise du rendez-vous, validation des créneaux et confirmations ne reposent pas sur votre équipe de réception, qui n\'a donc aucune charge opérationnelle supplémentaire à absorber avant le jour J. Les consignes se transmettent jusqu\'aux praticiens dans ce même mouvement, tout en garantissant prévisibilité lorsque votre client retrouve le professionnel dans la suite.", 'cbs-theme' ),
+
+		'modele_vous_gardez_text' => __( 'Vous fixez le prix client et gérez la relation avec vos hôtes. Nous gérons les praticiens, la qualité et la conformité.', 'cbs-theme' ),
+
+		'positionnement_image_fallback' => 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80',
+		'planif_image_fallback'          => 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80',
+		'seo_massages_image_fallback'     => 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+		'seo_massages_h2_fallback'        => __( 'Massages en chambre pour hôtels haut de gamme en Alsace', 'cbs-theme' ),
+
+		'seo_massages_body_fallback'      => __( "L\'expérience de massages en chambre prolonge la promesse de bien-être lorsque votre établissement ne peut pas encore aménager un spa physique. Dans une maison quatre ou cinq étoiles, vos hôtes attendent une exigence comparable à celle d\'une cabine : protocoles partagés, hygiène stricte, tenue impeccable. En Alsace, cette continuité prolonge naturellement votre service bien-être hôtelier jusqu\'aux suites, là où vos clients souhaitent rester après une journée chargée sans parcourir tout l\'hôtel.\n\nVous décidez des prix affichés et portez la relation directe avec vos invités lorsque la promesse tarifaire se poursuit encore dans leur chambre. Nous mettons au contact des praticiens de massage qui connaissent l\'attente d\'une maison quatre étoiles, vérifions la conformité et faisons passer les consignes qualité jusqu\'au jour du soin dans l\'intimité de leur espace privatif. Une assistance téléphonique dédiée enregistre les créneaux, assure les confirmations et garde une trace commune dans un tableau partagé, ce qui évite tout surcroît à votre équipe de réception. C\'est ainsi une voie très crédible pour offrir un niveau quatre étoiles sans déployer encore une infrastructure spa traditionnelle lourde sur site.", 'cbs-theme' ),
+
 		'cta_label'        => __( 'Nous contacter', 'cbs-theme' ),
 	);
 }
@@ -532,7 +551,7 @@ function cbs_gestion_massages_defaults(): array {
  */
 function cbs_gestion_massages_modele_lignes_default(): array {
 	return array(
-		__( 'Base tarifaire fixe fournie par CB', 'cbs-theme' ),
+		__( 'Base tarifaire fixe fournie par Gestion des Rituels du Spa', 'cbs-theme' ),
 		__( 'L\'hôtel applique la marge qu\'il souhaite et fixe le prix client', 'cbs-theme' ),
 	);
 }

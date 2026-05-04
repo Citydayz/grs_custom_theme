@@ -3,12 +3,37 @@
     "title": "CBS — Qui sommes-nous",
     "fields": [
         {
-            "key": "field_cbs_qsn_bio",
-            "label": "Présentation — Camille Becht",
-            "name": "cbs_bio",
+            "key": "field_cbs_qsn_photo",
+            "label": "Photo — bloc bio",
+            "name": "cbs_qsn_photo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Portrait ou photo terrain. Vide = image Unsplash par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_cbs_qsn_bio_text",
+            "label": "Texte — bio (Camille Becht)",
+            "name": "cbs_qsn_bio",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "Bio et parcours terrain. Laisser vide pour afficher le marqueur [À COMPLÉTER] sur le site.",
+            "instructions": "Parcours et expertise. Vide = texte par défaut du thème.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -19,7 +44,7 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "basic",
-            "media_upload": 1,
+            "media_upload": 0,
             "delay": 0
         },
         {
@@ -28,7 +53,7 @@
             "name": "cbs_qsn_chiffres",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Bandeau chiffres (valeur + libellé).",
+            "instructions": "Bandeau trois statistiques. Vide = 2012 \/ +13 ans \/ 4★ et 5★ (défaut thème).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -49,7 +74,7 @@
                     "name": "cbs_qsn_chiffre_valeur",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "Ex. +10, 5★, 13",
+                    "instructions": "Ex. 2012, +13 ans, 4★ et 5★",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -88,12 +113,12 @@
             ]
         },
         {
-            "key": "field_cbs_qsn_valeurs",
-            "label": "Valeurs et positionnement",
+            "key": "field_cbs_qsn_rep_valeurs",
+            "label": "Valeurs (3 colonnes)",
             "name": "cbs_qsn_valeurs",
             "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "Contenu détaillé à recueillir avec Camille. Vide = [À COMPLÉTER] sur le site.",
+            "type": "repeater",
+            "instructions": "Titre + texte par valeur. Vide = les trois valeurs par défaut du thème.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -101,19 +126,64 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_cbs_qsn_valeur_titre",
+            "button_label": "Ajouter une valeur",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_cbs_qsn_valeur_titre",
+                    "label": "Titre",
+                    "name": "cbs_qsn_valeur_titre",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_cbs_qsn_rep_valeurs"
+                },
+                {
+                    "key": "field_cbs_qsn_valeur_texte",
+                    "label": "Texte",
+                    "name": "cbs_qsn_valeur_texte",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 5,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_cbs_qsn_rep_valeurs"
+                }
+            ]
         },
         {
-            "key": "field_cbs_qsn_academie_intro",
-            "label": "Texte — lien Académie",
-            "name": "cbs_qsn_academie_intro",
+            "key": "field_cbs_qsn_academie_image",
+            "label": "Image — bloc Académie \/ Maison",
+            "name": "cbs_qsn_academie_image",
             "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "Paragraphe avant le bouton vers l’Académie des rituels spa.",
+            "type": "image",
+            "instructions": "Vide = image Unsplash par défaut.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -121,15 +191,20 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_cbs_qsn_academie_url",
-            "label": "URL Académie",
+            "label": "URL bouton Académie",
             "name": "cbs_qsn_academie_url",
             "aria-label": "",
             "type": "url",
@@ -250,5 +325,5 @@
     "description": "Page Qui sommes-nous — content-structure.md §9.",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1775742336
+    "modified": 1748791200
 }

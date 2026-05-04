@@ -1,6 +1,6 @@
 <?php
 /**
- * Archive CPT études de cas — `/references/` (content-structure.md §7).
+ * Archive CPT études de cas — `/etudes-de-cas/` ; vitrine `/references/` (page).
  *
  * @package CBS_Theme
  */

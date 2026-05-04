@@ -1,0 +1,44 @@
+{
+    "key": "group_cbs_page_legal",
+    "title": "CBS — Page légale",
+    "fields": [
+        {
+            "key": "field_cbs_legal_last_updated",
+            "label": "Dernière mise à jour",
+            "name": "last_updated",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "Affichée sous le titre au format jj/mm/aaaa. Laisser vide pour utiliser la date de dernière modification WordPress.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d/m/Y",
+            "return_format": "d/m/Y",
+            "first_day": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/page-legal.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Champs pour le template « Page légale » (CGU, mentions légales, politique de confidentialité).",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1749043200
+}

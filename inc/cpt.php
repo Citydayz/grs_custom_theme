@@ -7,7 +7,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * CPT Études de cas — archive publique `/references/`.
+ * CPT Études de cas — archive publique `/etudes-de-cas/` (page vitrine réservée à `/references/`).
  */
 function cbs_register_cpt_etude_de_cas(): void {
 	register_post_type(
@@ -26,7 +26,7 @@ function cbs_register_cpt_etude_de_cas(): void {
 			),
 			'public'              => true,
 			'has_archive'         => true,
-			'rewrite'             => array( 'slug' => 'references' ),
+			'rewrite'             => array( 'slug' => 'etudes-de-cas' ),
 			'supports'            => array( 'title', 'thumbnail', 'excerpt' ),
 			'menu_icon'           => 'dashicons-portfolio',
 			'show_in_rest'        => false,

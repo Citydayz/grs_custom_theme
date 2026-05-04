@@ -39,6 +39,9 @@ function cbs_enqueue_assets(): void {
 	cbs_enqueue_calendly_when_needed();
 	cbs_enqueue_contact_form_assets();
 	cbs_enqueue_partners_on_front_page();
+	cbs_enqueue_page_references_css();
+	cbs_enqueue_page_qui_sommes_nous_css();
+	cbs_enqueue_blog_assets();
 }
 add_action( 'wp_enqueue_scripts', 'cbs_enqueue_assets' );
 
@@ -52,6 +55,51 @@ function cbs_enqueue_partners_on_front_page(): void {
 	wp_enqueue_style(
 		'cbs-partners',
 		CBS_URI . '/assets/css/components/partners.css',
+		array( 'cbs-main' ),
+		CBS_VERSION
+	);
+}
+
+/**
+ * Page vitrine Références — `assets/css/components/references.css`.
+ */
+function cbs_enqueue_page_references_css(): void {
+	if ( ! is_page( 'references' ) ) {
+		return;
+	}
+	wp_enqueue_style(
+		'cbs-page-references',
+		CBS_URI . '/assets/css/components/references.css',
+		array( 'cbs-main' ),
+		CBS_VERSION
+	);
+}
+
+/**
+ * Page Qui sommes-nous — `assets/css/components/qui-sommes-nous.css`.
+ */
+function cbs_enqueue_page_qui_sommes_nous_css(): void {
+	if ( ! is_page( 'qui-sommes-nous' ) ) {
+		return;
+	}
+	wp_enqueue_style(
+		'cbs-page-qui-sommes-nous',
+		CBS_URI . '/assets/css/components/qui-sommes-nous.css',
+		array( 'cbs-main' ),
+		CBS_VERSION
+	);
+}
+
+/**
+ * Liste et article de blog (`assets/css/components/blog.css`).
+ */
+function cbs_enqueue_blog_assets(): void {
+	if ( ! cbs_is_blog_frontend_view() ) {
+		return;
+	}
+	wp_enqueue_style(
+		'cbs-blog',
+		CBS_URI . '/assets/css/components/blog.css',
 		array( 'cbs-main' ),
 		CBS_VERSION
 	);

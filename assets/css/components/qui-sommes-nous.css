@@ -1,0 +1,289 @@
+/**
+ * Page Qui sommes-nous — sections dédiées (chargement conditionnel).
+ */
+
+.qui-sommes-nous__hero.methode-spa-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh;
+  padding-block: var(--cbs-space-24);
+  padding-top: max(var(--cbs-space-24), 6rem);
+}
+
+.qui-sommes-nous__hero .methode-spa-hero__title {
+  font-size: var(--cbs-text-h1);
+  font-weight: 600;
+  margin-bottom: var(--cbs-space-4);
+}
+
+.qui-sommes-nous__hero .methode-spa-hero__subtitle {
+  margin-bottom: 0;
+}
+
+/* ——— Bio split ——— */
+.qui-sommes-nous__bio {
+  background-color: var(--cbs-white);
+}
+
+.qui-sommes-nous__bio-split {
+  display: grid;
+  gap: 0;
+  max-width: var(--cbs-container-wide);
+  margin-inline: auto;
+  padding-inline: var(--cbs-section-px);
+}
+
+@media (min-width: 768px) {
+  .qui-sommes-nous__bio-split {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+.qui-sommes-nous__bio-media {
+  position: relative;
+  min-height: 32.5rem;
+  overflow: hidden;
+}
+
+.qui-sommes-nous__bio-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.qui-sommes-nous__bio-text {
+  padding: var(--cbs-space-12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.qui-sommes-nous__kicker {
+  font-family: var(--cbs-font-sans);
+  font-size: var(--cbs-text-small);
+  font-weight: 600;
+  letter-spacing: var(--cbs-tracking-wide);
+  text-transform: uppercase;
+  color: var(--cbs-gold);
+  margin: 0 0 var(--cbs-space-4);
+}
+
+.qui-sommes-nous__bio-heading {
+  font-family: var(--cbs-font-serif);
+  font-size: var(--cbs-text-h2);
+  font-weight: 600;
+  line-height: var(--cbs-leading-snug);
+  color: var(--cbs-silver-900);
+  margin: 0 0 var(--cbs-space-6);
+}
+
+.qui-sommes-nous__bio-copy {
+  font-family: var(--cbs-font-sans);
+  font-size: var(--cbs-text-body);
+  line-height: var(--cbs-leading-relaxed);
+  color: var(--cbs-silver-700);
+}
+
+.qui-sommes-nous__bio-copy p {
+  margin: 0 0 var(--cbs-space-4);
+}
+
+.qui-sommes-nous__bio-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* ——— Chiffres (bandeau sombre, structure type références) ——— */
+.qui-sommes-nous__stats-strip {
+  background-color: var(--cbs-silver-900);
+  padding-block: var(--cbs-space-20);
+}
+
+.qui-sommes-nous__stats-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--cbs-space-10);
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .qui-sommes-nous__stats-list {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: var(--cbs-space-8);
+  }
+}
+
+.qui-sommes-nous__stats-item {
+  margin: 0;
+}
+
+.qui-sommes-nous__stats-value {
+  font-family: var(--cbs-font-serif);
+  font-size: clamp(2rem, 5vw, var(--cbs-text-h2));
+  font-weight: 600;
+  line-height: var(--cbs-leading-tight);
+  color: var(--cbs-gold);
+  margin: 0 0 var(--cbs-space-3);
+}
+
+.qui-sommes-nous__stats-label {
+  font-family: var(--cbs-font-sans);
+  font-size: var(--cbs-text-small);
+  line-height: var(--cbs-leading-relaxed);
+  color: var(--cbs-silver-300);
+  margin: 0;
+}
+
+/* ——— Valeurs — 3 colonnes, séparateurs ——— */
+.qui-sommes-nous__valeurs {
+  background-color: var(--cbs-silver-50);
+  padding-block: var(--cbs-space-24);
+}
+
+.qui-sommes-nous__valeurs-grid {
+  display: grid;
+  gap: var(--cbs-space-10);
+}
+
+@media (min-width: 1024px) {
+  .qui-sommes-nous__valeurs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .qui-sommes-nous__valeurs-col {
+    padding-inline: var(--cbs-space-8);
+    border-inline-start: 1px solid var(--cbs-gold-muted);
+  }
+
+  .qui-sommes-nous__valeurs-col:first-child {
+    border-inline-start: none;
+    padding-inline-start: 0;
+  }
+
+  .qui-sommes-nous__valeurs-col:last-child {
+    padding-inline-end: 0;
+  }
+}
+
+.qui-sommes-nous__valeur-title {
+  font-family: var(--cbs-font-serif);
+  font-size: var(--cbs-text-h3);
+  font-weight: 600;
+  line-height: var(--cbs-leading-normal);
+  color: var(--cbs-silver-900);
+  margin: 0 0 var(--cbs-space-4);
+}
+
+.qui-sommes-nous__valeur-text {
+  font-family: var(--cbs-font-sans);
+  font-size: var(--cbs-text-body);
+  line-height: var(--cbs-leading-relaxed);
+  color: var(--cbs-silver-700);
+  margin: 0;
+}
+
+.qui-sommes-nous__valeur-text p {
+  margin: 0 0 var(--cbs-space-3);
+}
+
+.qui-sommes-nous__valeur-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ——— Bloc Académie — split sombre ——— */
+.qui-sommes-nous__academie {
+  background-color: var(--cbs-silver-900);
+  padding-block: var(--cbs-section-py);
+}
+
+.qui-sommes-nous__academie-split {
+  display: grid;
+  gap: var(--cbs-space-12);
+  max-width: var(--cbs-container-wide);
+  margin-inline: auto;
+  padding-inline: var(--cbs-section-px);
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .qui-sommes-nous__academie-split {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--cbs-space-16);
+  }
+}
+
+.qui-sommes-nous__academie-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.qui-sommes-nous__academie-heading {
+  font-family: var(--cbs-font-serif);
+  font-size: var(--cbs-text-h2);
+  font-weight: 600;
+  line-height: var(--cbs-leading-snug);
+  color: var(--cbs-white);
+  margin: 0 0 var(--cbs-space-6);
+}
+
+.qui-sommes-nous__academie-copy {
+  font-family: var(--cbs-font-sans);
+  font-size: var(--cbs-text-body);
+  line-height: var(--cbs-leading-relaxed);
+  color: var(--cbs-silver-200);
+  margin-bottom: var(--cbs-space-8);
+}
+
+.qui-sommes-nous__academie-copy p {
+  margin: 0 0 var(--cbs-space-4);
+}
+
+.qui-sommes-nous__academie-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.qui-sommes-nous__academie-cta {
+  margin: 0;
+}
+
+.qui-sommes-nous__academie-cta .btn-secondary {
+  align-self: flex-start;
+}
+
+.qui-sommes-nous__academie-media {
+  position: relative;
+  min-height: 20rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .qui-sommes-nous__academie-media {
+    min-height: 28rem;
+  }
+}
+
+.qui-sommes-nous__academie-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Témoignages & CTA final */
+.qui-sommes-nous__testimonials .social-proof__title {
+  margin-bottom: var(--cbs-space-10);
+}
+
+.qui-sommes-nous__final-cta {
+  text-align: center;
+}

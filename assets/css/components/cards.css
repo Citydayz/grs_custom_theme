@@ -770,7 +770,8 @@
   letter-spacing: var(--cbs-tracking-wide);
   text-transform: uppercase;
   color: var(--cbs-gold);
-  margin: 0 0 var(--cbs-space-6);
+  margin: 0 auto var(--cbs-space-6);
+  text-align: center;
 }
 
 .methode-spa-hero__title {
@@ -807,6 +808,46 @@
   background-color: var(--cbs-gold-dark);
   border-color: var(--cbs-gold-dark);
   color: var(--cbs-white);
+}
+
+/* Niveau 1 diagnostic — bandeau accroche (clair entre hero sombre et bloc Prestations) */
+.n1-accroche {
+  background-color: var(--cbs-silver-50);
+  padding-block: 96px;
+  text-align: center;
+}
+
+.n1-accroche__text {
+  font-family: var(--cbs-font-serif);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cbs-silver-900);
+  margin: 0;
+  line-height: var(--cbs-leading-snug);
+}
+
+.n1-accroche__sep {
+  width: 40px;
+  height: 1px;
+  background: var(--cbs-gold);
+  margin: 32px auto;
+  border: 0;
+  padding: 0;
+}
+
+.n1-accroche__sub {
+  font-family: var(--cbs-font-sans);
+  font-size: 0.85rem;
+  line-height: var(--cbs-leading-relaxed);
+  color: var(--cbs-silver-600);
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.n1-accroche__sub p {
+  margin: 0;
 }
 
 .methode-positionnement {
@@ -863,6 +904,7 @@
 .methode-credibilite {
   background-color: var(--cbs-silver-100);
   text-align: center;
+  padding: 64px 0;
 }
 
 .methode-credibilite__inner {
@@ -1235,7 +1277,8 @@
   letter-spacing: var(--cbs-tracking-wider);
   text-transform: uppercase;
   color: var(--cbs-gold);
-  margin: 0 0 var(--cbs-space-4);
+  margin: 0 auto var(--cbs-space-4);
+  text-align: center;
 }
 
 .offre-phases__title {
@@ -1341,6 +1384,7 @@
 }
 
 .phase-card__list {
+  display: none;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1367,6 +1411,7 @@
 }
 
 .phase-card__livrables {
+  display: none;
   font-family: var(--cbs-font-sans);
   font-size: var(--cbs-text-xs);
   line-height: var(--cbs-leading-relaxed);
@@ -1853,136 +1898,3 @@
   }
 }
 
-/* ——— Qui sommes-nous (content-structure.md §9) ——— */
-.qui-sn-hero.methode-spa-hero {
-  padding-top: calc(var(--cbs-space-32) + 80px);
-}
-
-.qui-sn-hero .methode-spa-hero__title {
-  font-size: var(--cbs-text-h1);
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.qui-sn-section-title {
-  font-family: var(--cbs-font-serif);
-  font-size: var(--cbs-text-h2);
-  font-weight: 600;
-  color: var(--cbs-silver-900);
-  margin: 0 0 var(--cbs-space-6);
-  line-height: var(--cbs-leading-snug);
-}
-
-.qui-sn-bio {
-  background-color: var(--cbs-white);
-}
-
-.qui-sn-bio__inner {
-  max-width: 42rem;
-}
-
-.qui-sn-bio__content,
-.qui-sn-valeurs__content {
-  font-family: var(--cbs-font-sans);
-  font-size: var(--cbs-text-body);
-  line-height: var(--cbs-leading-relaxed);
-  color: var(--cbs-silver-700);
-}
-
-.qui-sn-bio__content p,
-.qui-sn-valeurs__content p {
-  margin: 0 0 var(--cbs-space-4);
-}
-
-.qui-sn-bio__content p:last-child,
-.qui-sn-valeurs__content p:last-child {
-  margin-bottom: 0;
-}
-
-.qui-sn-placeholder {
-  font-family: var(--cbs-font-sans);
-  font-size: var(--cbs-text-body);
-  font-style: italic;
-  color: var(--cbs-silver-500);
-  margin: 0;
-}
-
-.qui-sn-chiffres {
-  background-color: var(--cbs-silver-50);
-}
-
-.qui-sn-chiffres .qui-sn-chiffres__list {
-  margin-bottom: 0;
-}
-
-.qui-sn-valeurs {
-  background-color: var(--cbs-white);
-}
-
-.qui-sn-valeurs__inner {
-  max-width: 42rem;
-}
-
-.qui-sn-academie {
-  background-color: var(--cbs-silver-50);
-}
-
-.qui-sn-academie__card {
-  max-width: 40rem;
-  margin-inline: auto;
-  padding: var(--cbs-space-10);
-  background-color: var(--cbs-white);
-  border: 1px solid var(--cbs-silver-200);
-  border-radius: var(--cbs-radius-lg);
-  box-shadow: var(--cbs-shadow-sm);
-  text-align: center;
-}
-
-.qui-sn-academie__title {
-  font-family: var(--cbs-font-serif);
-  font-size: var(--cbs-text-h3);
-  font-weight: 600;
-  color: var(--cbs-silver-900);
-  margin: 0 0 var(--cbs-space-4);
-}
-
-.qui-sn-academie__intro {
-  font-family: var(--cbs-font-sans);
-  font-size: var(--cbs-text-body);
-  line-height: var(--cbs-leading-relaxed);
-  color: var(--cbs-silver-700);
-  text-align: left;
-  margin-bottom: var(--cbs-space-6);
-}
-
-.qui-sn-academie__intro p {
-  margin: 0 0 var(--cbs-space-3);
-}
-
-.qui-sn-academie__intro p:last-child {
-  margin-bottom: 0;
-}
-
-.qui-sn-academie__cta-wrap {
-  margin: 0 0 var(--cbs-space-4);
-}
-
-.qui-sn-academie__url-note {
-  font-family: var(--cbs-font-sans);
-  font-size: var(--cbs-text-xs);
-  color: var(--cbs-silver-500);
-  margin: 0;
-}
-
-.qui-sn-academie__host {
-  font-weight: 600;
-  color: var(--cbs-silver-700);
-}
-
-.qui-sn-temoignages .social-proof__title {
-  margin-bottom: var(--cbs-space-10);
-}
-
-.qui-sn-final-cta {
-  text-align: center;
-}

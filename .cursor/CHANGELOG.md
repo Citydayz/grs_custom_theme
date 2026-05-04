@@ -17,6 +17,196 @@
 
 ---
 
+## [0.25.1] — 2026-05-04
+### Fixed
+- **`template-parts/home/partners.php`** + **`assets/css/components/partners.css`** — boucle du bandeau partenaires : deux blocs `.cbs-partners__strip` (clone DOM), `flex-shrink: 0`, animation `cbs-partners-marquee` en `translate3d(0 → -50%)` ; `prefers-reduced-motion` désactive l’animation.
+- **Logos** — classe `.cbs-partners__logo`, hauteur 48px (36px en vue étroite ≤767px), `width: auto`, `object-fit: contain`.
+
+### Commit
+`—`
+
+---
+
+## [0.25.0] — 2026-05-04
+### Added
+- **`page-templates/page-legal.php`** — gabarit « Page légale » (hero compact, colonne ~760px, toc conditionnelle >5 h2, script responsive pour `<details>` mobile).
+- **`inc/legal-page.php`** — helpers `cbs_legal_get_last_updated_display()`, `cbs_legal_prepare_content()` (filtre `the_content`, ancres h2).
+- **`acf-json/group_cbs_page_legal.json`** — champ ACF `last_updated` (date) rattaché au template.
+- **`assets/css/components/forms.css`** — blocs `.legal-page_*` (prose, toc, titres, liens) avec variables du thème uniquement.
+
+### Changed
+- **`functions.php`** — `require_once` de **`inc/legal-page.php`**.
+- **`inc/acf-fields.php`** — documentation du groupe « CBS — Page légale ».
+
+### Commit
+`—`
+
+---
+
+## [0.24.0] — 2026-05-02
+### Added
+- **`single.php`** — gabarit article : hero image à la une (`methode-spa-hero--photo-bg` + overlay) ou fond uni, métadonnées, corps éditorial, bandeau auteur, **`previous_post_link()`** / **`next_post_link()`**, bloc « À lire aussi » (3 posts hors courant), CTA contact comme l’archive.
+- **`assets/css/components/blog.css`** — styles gabarit single (`single-article_*`, pager, lien suggérés).
+
+### Commit
+`—`
+
+---
+
+## [0.23.0] — 2026-05-02
+### Added
+- **`home.php`** + **`archive.php`** (listings articles catégories / étiquettes / auteur / date) + gabarit partagé **`template-parts/blog/blog-archive.php`** : hero Blog, mise en avant, grille 6, pagination `paginate_links`, CTA contact.
+- **`inc/blog-archive.php`** — helpers requête, pagination dérivée (`cbs_blog_archive_matching_count`, etc.), **`pre_get_posts`** pour **`post`** + **`ignore_sticky_posts`** sur la page des articles lorsque **`show_on_front`** = « page », **`cbs_is_blog_frontend_view()`**, **`cbs_archive_use_blog_layout()`**.
+- **`assets/css/components/blog.css`** chargé conditionnellement via **`cbs_enqueue_blog_assets()`** dans **`inc/enqueue.php`** (`is_home`, archives articles, **`is_singular( 'post' )`**).
+
+### Changed
+- **`functions.php`** — **`require_once`** de **`inc/blog-archive.php`** (avant **`setup.php`**).
+- **`inc/enqueue.php`** — appel à **`cbs_enqueue_blog_assets()`** depuis **`cbs_enqueue_assets()`**.
+
+### Commit
+—
+
+---
+
+## [0.22.0] — 2026-05-02
+### Added
+- Fond du hero via **image à la une** (`has_post_thumbnail` → `background-image` sur la `<section>` hero) avec overlay **`--cbs-overlay-dark`** sur les pages offres, références, hub gestion, qui sommes-nous ; styles partagés dans **`assets/css/components/offres-conseil.css`** et **`offres-gestion.css`**.
+
+### Changed
+- **`template-parts/offres/niveau-1-diagnostic.php`**, **`niveau-2-conception.php`**, **`niveau-3-performance.php`**, **`staffing.php`**, **`massages-chambre.php`**, **`gestion-hub.php`**, **`gestion-complete.php`**, **`gestion-partielle.php`**, **`template-parts/references.php`**, **`template-parts/offres/qui-sommes-nous.php`** — injection conditionnelle `$hero_bg` sur le hero ; classe **`qui-sn-hero`** sur Qui sommes-nous pour l’overlay.
+
+### Commit
+—
+
+---
+
+## [0.21.0] — 2026-05-02
+### Added
+- **`assets/css/components/qui-sommes-nous.css`** — styles page Qui sommes-nous (hero 65vh, split bio, bandeau stats sombre, valeurs 3 colonnes, bloc Académie split) ; chargés via `cbs_enqueue_page_qui_sommes_nous_css()` sur `is_page( 'qui-sommes-nous' )`.
+- **`inc/qui-sommes-nous-defaults.php`** — défauts chiffres, valeurs, bio WYSIWYG, texte écosystème, helpers `cbs_qsn_image_src` / `cbs_qsn_image_alt`.
+
+### Changed
+- **`template-parts/offres/qui-sommes-nous.php`** — refonte sections A–F (nouveaux titres hero, split bio + ACF `cbs_qsn_photo` / `cbs_qsn_bio`, stats type bandeau références, repeater valeurs, split Académie + `cbs_qsn_academie_image`, CTA inchangé) ; wrapper **`.qui-sommes-nous`**.
+- **`acf-json/group_cbs_page_qui_sommes_nous.json`** — champs `cbs_qsn_photo`, `cbs_qsn_bio` (remplace `cbs_bio`) ; `cbs_qsn_valeurs` en repeater (`cbs_qsn_valeur_*`) ; `cbs_qsn_academie_image` ; suppression `cbs_qsn_academie_intro`.
+- **`inc/enqueue.php`**, **`functions.php`**, **`inc/acf-fields.php`** — enqueue et doc alignés.
+- **`assets/css/components/cards.css`** — retrait des anciens blocs `.qui-sn-*` (déplacés vers `qui-sommes-nous.css`).
+
+### Commit
+—
+
+---
+
+## [0.20.1] — 2026-05-02
+### Added
+- **Section SEO** (`page-references__seo`) sur la vitrine Références : split texte / image, champs **`cbs_ref_seo_image`**, **`cbs_ref_seo_text`** dans `group_cbs_page_references.json`.
+- Défauts **`seo_heading`**, **`seo_text`**, **`seo_image`** dans `inc/references-defaults.php`.
+
+### Changed
+- **`assets/css/components/references.css`** — effets hover bento (`scale` image, overlay renforcé) ; **`prefers-reduced-motion`** ; section citation en fond **`--cbs-white`** pour alterner après le bloc SEO (**`--cbs-silver-50`**).
+- **`assets/css/base/tokens.css`** — overlays hover bento (`--cbs-overlay-bento-hover-*`), hauteur min image SEO (**`--cbs-layout-ref-seo-media-min-h`**), transitions bento (**`--cbs-transition-bento-*`**).
+- **`template-parts/references.php`** — ordre Stats → SEO → Citation → CTA.
+
+### Commit
+—
+
+---
+
+## [0.20.0] — 2026-05-02
+### Added
+- **`template-parts/references.php`** — page vitrine Références (`/references/`) : hero, grille bento 3 vignettes ACF ou défauts, bandeau chiffres clés, citation, CTA contact.
+- **`assets/css/components/references.css`** — styles page vitrine ; chargés via `cbs_enqueue_page_references_css()` (page slug `references` uniquement).
+- **`acf-json/group_cbs_page_references.json`** — champs ACF (hero, repeater `cbs_references`, stats, citation, CTA).
+- **`inc/references-defaults.php`** — textes et repeater par défaut (Unsplash placeholders).
+
+### Changed
+- **`page.php`** — routage `references` → `template-parts/references`.
+- **`functions.php`** — `require` des défauts références.
+- **`inc/enqueue.php`** — fonction `cbs_enqueue_page_references_css()`.
+- **`inc/cpt.php`** — réécriture archive CPT **`etudes-de-cas`** au lieu de `references` pour libérer l’URL de la page WordPress *(réécritures à regénérer : Réglages → Permaliens)*.
+- **`inc/helpers.php`** — meta archive études : clé carte `etudes-de-cas`.
+- **`inc/seo-meta-map.php`** — entrée archive `etudes-de-cas` ; entrée page `references` dédiée à la vitrine.
+- **`inc/acf-fields.php`** — documentation des nouveaux champs et URL archive.
+- **`archive-etude-de-cas.php`** — entête fichier (URL archive).
+- **`assets/css/base/tokens.css`** — tokens dégradé bento, hauteurs grille, typo citation.
+
+### Commit
+—
+
+---
+
+## [0.19.3] — 2026-05-02
+### Changed
+- **`template-parts/offres/massages-chambre.php`** & **`staffing.php`** — missions établissement : **`methode-niveaux--light`**.
+- **`assets/css/components/offres-gestion.css`** — remplacement du sélecteur **`offre-phases + .methode-niveaux`** (variante précédente) par **`.methode-niveaux--light`** uniquement.
+
+---
+
+## [0.19.1] — 2026-05-02
+### Changed
+- **`assets/css/components/offres-gestion.css`** — page **Massages** : bloc modèle (**`offre-gestion-staff-modele--dark`**) désormais en fond **clair** (**`--cbs-silver-50`**) et cartes blanches ; bloc **SEO** massages (**`offre-gestion-massages-seo`**) en fond **`--cbs-silver-900`** avec texte clair (`h2`, paragraphes).
+
+---
+
+## [0.19.0] — 2026-05-02
+### Added
+- **`acf-json/group_cbs_pages_gestion.json`** — page **Massages** : **`cbs_massages_positionnement_image`**, **`cbs_massages_planif_image`**, **`cbs_massages_seo_image`**, **`cbs_massages_seo_text`**.
+
+### Changed
+- **`template-parts/offres/massages-chambre.php`** — alignement structure **staffing** : positionnement **split** (blanc), **modèle tarifaire** deux cartes sur fond **`--cbs-silver-900`**, missions (ordre inchangé), **planification** split fond **`--cbs-silver-50`**, **SEO** avant CTA split image gauche / texte droite fond **blanc**, puis CTA.
+- **`inc/offres-gestion-defaults.php`** — défauts §6 : texte planif enrichi, carte **« Ce que vous gardez »**, paragraphe SEO + fallbacks Unsplash, sans tiret cadratin dans les chaînes traduisibles.
+- **`assets/css/components/offres-gestion.css`** — **`.offre-gestion-staff-modele--dark`** (cartes semi-transparentes), variantes **`.offre-gestion-massages-planif`** / **`.offre-gestion-massages-seo`**, **`.offre-gestion-staff-seo--media-leading`** (padding texte quand l’image précède).
+- **`inc/acf-fields.php`** — commentaire groupe Gestion (champs massages split / SEO).
+
+---
+
+## [0.18.8] — 2026-05-02
+### Changed
+- **`inc/offres-gestion-defaults.php`** — textes par défaut (hub, gestion partielle / complète, staffing, massages, SEO staffing) : suppression du motif **` — `** au profit de virgules, deux-points ou phrases séparées (clés PHP et docblocks inchangés).
+- **`template-parts/offres/staffing.php`** — texte **`alt`** positionnement sans tiret cadratin.
+
+---
+
+## [0.18.7] — 2026-05-03
+### Changed
+- **`assets/css/components/offres-gestion.css`** — staffing : **`.offre-gestion-position-split`** en **`--cbs-white`** ; **`.offre-gestion-staff-modele`** explicitement **`--cbs-silver-50`** ; grille positionnement desktop (**≥768px**) **`1fr 1fr`**, **`min-height: 480px`**, **`__img`** en couverture absolue (aligné au snippet demandé). Mobile conservé en **une colonne** pour éviter de casser le flux.
+
+---
+
+## [0.18.6] — 2026-05-03
+### Fixed
+- **`template-parts/offres/staffing.php`** — **`offre-gestion-staff-modele`** : attribut **`style`** de secours **`background-color: var(--cbs-silver-50)`** ; classe **`offre-gestion-position-split__image`** sur le conteneur image (avec **`__media`**)
+- **`assets/css/components/offres-gestion.css`** — split positionnement : conteneurs **`__media` / `__image`** renforcés (**`width: 100%`**, vue ≥768px **`height: 100%`** + grille **`align-items: stretch`**), **`__img`** avec **`max-width: none`** pour éviter tout écrêtage sur le remplissage
+
+---
+
+## [0.18.5] — 2026-05-03
+### Changed
+- **`assets/css/components/offres-gestion.css`** — section **staffing « Modèle tarifaire »** : fond **`--cbs-silver-50`**, cartes **`--cbs-white`** / filet **`--cbs-silver-200`**, titres **`--cbs-silver-900`**, textes · listes **`--cbs-silver-700`**
+- **`template-parts/offres/staffing.php`** — intitulé carte gauche : **« Ce que Gestion des Rituels du Spa gère »**
+- **`inc/offres-gestion-defaults.php`** — défauts : **CB** → **Gestion des Rituels du Spa** sur les lignes modèle (**staffing**, **massages**, détail tableau **gestion partielle**)
+
+---
+
+## [0.18.4] — 2026-05-03
+### Added
+- **Page staffing (`staffing-spa`)** — split **Positionnement** (image + texte, fond **`--cbs-silver-50`**), champ ACF **`cbs_staffing_positionnement_image`** ; section **SEO** avant CTA (fond blanc), champs **`cbs_staffing_seo_image`**, **`cbs_staffing_seo_text`**
+- **`inc/offres-gestion-defaults.php`** — placeholders Unsplash staffing + paragraphe SEO par défaut (≈ 160–180 mots) + texte carte « Ce que vous gardez »
+- **`acf-json/group_cbs_pages_gestion.json`** — trois champs staffing ci-dessus ; note **`cbs_gestion_s_note`** documentée comme legacy hors front
+
+### Changed
+- **`template-parts/offres/staffing.php`** — modèle tarifaire en fond sombre (**`--cbs-silver-900`**) avec **deux cartes** (liste 4 lignes répéteur à gauche, texte fixe à droite) ; retrait du bloc résiduel **« L'établissement conserve le pilotage. »**
+- **`assets/css/components/offres-gestion.css`** — blocs **`.offre-gestion-position-split`**, **`.offre-gestion-staff-modele*`**, **`.offre-gestion-staff-seo*`**
+- **`inc/acf-fields.php`** — liste des clés staffing ACF mise à jour
+
+---
+
+## [0.18.3] — 2026-05-02
+### Fixed
+- **`template-parts/offres/niveau-1-diagnostic.php`** — section accroche : classe **`diag-accroche`**, conteneur **`diag-accroche__inner`**, fond clair **`var(--cbs-silver-50)`** en attribut **`style`** sur la **`<section>`**
+- **`assets/css/components/offres-conseil.css`** — restauration de la partie **N1 / N2 / N3 Performance** précédemment hors dépôt Git ; **`.diag-accroche`** : fond **`--cbs-silver-50`** avec **`!important`**, texte et filet centrés, sous-texte **`--cbs-silver-700`** ; suppression de l’ancien fond **`--cbs-silver-900`** qui écrasait **`cards.css`**
+
+---
+
 ## [0.18.2] — 2026-04-09
 ### Changed
 - **`template-parts/offres/methode-hub.php`** — cartes **« 3 temps »** : icônes SVG en tête, labels or, titres **h3** (Cormorant), texte inchangé ; bloc **témoignage** en **`.methode-testimonial`** (guillemet, citation, auteur) ; wrapper **`.methode-hub-page`** pour l’espacement vertical des sections.

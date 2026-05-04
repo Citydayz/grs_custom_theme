@@ -161,7 +161,7 @@ function cbs_seo_singular_meta_description( int $post_id ): string {
  */
 function cbs_get_page_meta_archives( array $map, array $empty ): ?array {
 	if ( is_post_type_archive( 'etude-de-cas' ) ) {
-		return $map['references'] ?? $empty;
+		return $map['etudes-de-cas'] ?? $empty;
 	}
 	if ( is_post_type_archive( 'produit-pro' ) ) {
 		$obj   = get_post_type_object( 'produit-pro' );

@@ -28,12 +28,73 @@ $options = function_exists( 'get_field' )
 	: $d['options'];
 
 $cta_label = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_offres_n2_cta_label', $pid ), $d['cta_label'] ) : $d['cta_label'];
+
+$split_d   = cbs_offres_niveau_2_split_defaults();
+$split_img = function_exists( 'get_field' ) ? cbs_offres_acf_image_url( get_field( 'cbs_conception_split_image', $pid ), $split_d['image'] ) : $split_d['image'];
+$split_txt = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_conception_split_text', $pid ), $split_d['text'] ) : $split_d['text'];
+$split_ttl = $split_d['title'];
+
+$prof_d   = cbs_offres_niveau_2_profiles_defaults();
+$profiles = $prof_d;
+if ( function_exists( 'get_field' ) ) {
+	$raw_prof = get_field( 'cbs_conception_profiles', $pid );
+	if ( is_array( $raw_prof ) && $raw_prof !== array() ) {
+		$profiles = array();
+		foreach ( $raw_prof as $i => $p ) {
+			$profiles[] = array(
+				'titre' => cbs_offres_scalar( $p['titre'] ?? '', $prof_d[$i]['titre'] ?? '' ),
+				'texte' => cbs_offres_scalar( $p['texte'] ?? '', $prof_d[$i]['texte'] ?? '' ),
+			);
+		}
+	}
+}
+
+$stats   = cbs_offres_niveau_2_stats_resolved( $pid );
+$seo_d   = cbs_offres_niveau_2_seo_text_default();
+$seo_txt = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs_conception_seo_text_bottom', $pid ), $seo_d ) : $seo_d;
+$seo_img_d = 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80';
+$seo_img = function_exists( 'get_field' ) ? cbs_offres_acf_image_url( get_field( 'cbs_conception_seo_image', $pid ), $seo_img_d ) : $seo_img_d;
+
+$options_cards = array();
+foreach ( $options as $opt_idx => $opt_str ) {
+	$parts = explode( ':', $opt_str, 2 );
+	$options_cards[] = array(
+		'num'   => sprintf( '%02d', $opt_idx + 1 ),
+		'kicker'=> 'OPTION',
+		'titre' => trim( $parts[0] ),
+		'texte' => isset( $parts[1] ) ? trim( $parts[1] ) : '',
+	);
+}
+
+$hero_bg = '';
+if ( has_post_thumbnail() ) {
+	$thumb_url = get_the_post_thumbnail_url( null, 'full' );
+	if ( is_string( $thumb_url ) && $thumb_url !== '' ) {
+		$hero_bg = ' style="background-image: url(\'' . esc_url( $thumb_url ) . '\');"';
+	}
+}
 ?>
-<section class="methode-spa-hero methode-spa-hero--compact cbs-section" aria-labelledby="n2-hero-heading">
+<section class="methode-spa-hero methode-spa-hero--compact perf-hero cbs-section" aria-labelledby="n2-hero-heading"<?php echo $hero_bg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_url(). ?>>
 	<div class="methode-spa-hero__inner cbs-container">
 		<p class="methode-spa-hero__kicker"><?php echo esc_html( $hero_kicker ); ?></p>
 		<h1 id="n2-hero-heading" class="methode-spa-hero__title"><?php echo esc_html( $hero_title ); ?></h1>
 		<p class="methode-spa-hero__subtitle"><?php echo esc_html( $hero_subtitle ); ?></p>
+	</div>
+</section>
+
+<section class="cbs-section methode-hub-moa" aria-labelledby="n2-split-heading">
+	<div class="cbs-container methode-hub-moa__split perf-split">
+		<div class="methode-hub-moa__media">
+			<div class="methode-hub-moa__frame">
+				<img class="methode-hub-moa__img" src="<?php echo esc_url( $split_img ); ?>" alt="" width="800" height="600" loading="lazy" decoding="async" />
+			</div>
+		</div>
+		<div class="methode-hub-moa__content">
+			<h2 id="n2-split-heading" class="methode-hub-moa__title"><?php echo esc_html( $split_ttl ); ?></h2>
+			<div class="methode-hub-moa__text">
+				<?php echo wp_kses_post( wpautop( $split_txt ) ); ?>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -87,14 +148,51 @@ $cta_label = function_exists( 'get_field' ) ? cbs_offres_scalar( get_field( 'cbs
 	</div>
 </section>
 
-<section class="cbs-section offre-detail" aria-labelledby="n2-options-heading">
-	<div class="cbs-container offre-detail__inner">
-		<h2 id="n2-options-heading" class="offre-detail__h2"><?php esc_html_e( 'Options tarifaires', 'cbs-theme' ); ?></h2>
-		<ul class="offre-detail__list">
-			<?php foreach ( $options as $line ) : ?>
-				<li><?php echo esc_html( $line ); ?></li>
+<section class="cbs-section methode-hub-bento" style="background-color: var(--cbs-white);" aria-labelledby="n2-profiles-heading">
+	<div class="cbs-container">
+		<h2 id="n2-profiles-heading" class="methode-hub-bento__title"><?php esc_html_e( 'Cette mission est faite pour vous si…', 'cbs-theme' ); ?></h2>
+		<div class="perf-profiles-grid">
+			<?php foreach ( $profiles as $prof ) : ?>
+				<article class="perf-profile-card">
+					<h3 class="perf-profile-card__title"><?php echo esc_html( $prof['titre'] ); ?></h3>
+					<?php if ( $prof['texte'] !== '' ) : ?>
+						<p class="perf-profile-card__text"><?php echo esc_html( $prof['texte'] ); ?></p>
+					<?php endif; ?>
+				</article>
 			<?php endforeach; ?>
-		</ul>
+		</div>
+	</div>
+</section>
+
+<section class="cbs-section offre-detail" style="background-color: var(--cbs-silver-900);" aria-labelledby="n2-options-heading">
+	<div class="cbs-container">
+		<h2 id="n2-options-heading" class="methode-hub-bento__title" style="margin-bottom: var(--cbs-space-8); color: var(--cbs-white);"><?php esc_html_e( 'Options tarifaires', 'cbs-theme' ); ?></h2>
+		<div class="n2-options-grid">
+			<?php foreach ( $options_cards as $card ) : ?>
+				<article class="n2-option-card">
+					<span class="n2-option-card__watermark" aria-hidden="true"><?php echo esc_html( $card['num'] ); ?></span>
+					<p class="n2-option-card__kicker"><?php echo esc_html( $card['kicker'] ); ?></p>
+					<h3 class="n2-option-card__title"><?php echo esc_html( $card['titre'] ); ?></h3>
+					<?php if ( $card['texte'] !== '' ) : ?>
+						<p class="n2-option-card__text"><?php echo esc_html( $card['texte'] ); ?></p>
+					<?php endif; ?>
+				</article>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+
+<section class="cbs-section perf-seo" aria-labelledby="n2-seo-heading">
+	<div class="cbs-container perf-seo__inner">
+		<div class="perf-seo__content">
+			<h2 id="n2-seo-heading" class="methode-hub-moa__title"><?php esc_html_e( "Assistance à maîtrise d'ouvrage spa hôtelier", 'cbs-theme' ); ?></h2>
+			<div class="methode-hub-moa__text">
+				<?php echo wp_kses_post( wpautop( $seo_txt ) ); ?>
+			</div>
+		</div>
+		<div class="perf-seo__media">
+			<img class="perf-seo__img" src="<?php echo esc_url( $seo_img ); ?>" alt="" width="800" height="600" loading="lazy" decoding="async" />
+		</div>
 	</div>
 </section>
 

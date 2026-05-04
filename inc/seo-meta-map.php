@@ -43,7 +43,11 @@ return array(
 	),
 	'references'                               => array(
 		'title'       => 'Références — Projets Spa Hôteliers Accompagnés | Camille Becht',
-		'description' => 'Découvrez les missions de conseil et de gestion menées auprès d\'hôtels 4★ et 5★. Création, optimisation, staffing.',
+		'description' => 'Des projets spa hôteliers 4★ et 5★ accomplis avec exigence : création from scratch, optimisation, gestion et staffing en Alsace et en France.',
+	),
+	'etudes-de-cas'                            => array(
+		'title'       => 'Études de cas — Projets Spa Hôteliers | Camille Becht',
+		'description' => 'Découvrez les missions de conseil et de gestion détaillées auprès d\'hôtels 4★ et 5★. Création, optimisation, staffing.',
 	),
 	'diagnostic-spa'                           => array(
 		'title'       => 'Diagnostic Spa Hôtelier Gratuit — Évaluez votre Spa en 3 min | Camille Becht',

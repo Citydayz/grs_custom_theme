@@ -41,8 +41,16 @@ if ( function_exists( 'get_field' ) ) {
 
 $url_p = home_url( '/gestion-partielle/' );
 $url_c = home_url( '/gestion-complete/' );
+
+$hero_bg = '';
+if ( has_post_thumbnail() ) {
+	$thumb_url = get_the_post_thumbnail_url( null, 'full' );
+	if ( is_string( $thumb_url ) && $thumb_url !== '' ) {
+		$hero_bg = ' style="background-image: url(\'' . esc_url( $thumb_url ) . '\');"';
+	}
+}
 ?>
-<section class="methode-spa-hero offre-gestion-hero cbs-section" aria-labelledby="gestion-hub-hero-heading">
+<section class="methode-spa-hero offre-gestion-hero cbs-section" aria-labelledby="gestion-hub-hero-heading"<?php echo $hero_bg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_url(). ?>>
 	<div class="methode-spa-hero__inner cbs-container">
 		<p class="methode-spa-hero__kicker"><?php echo esc_html( $hero_kicker ); ?></p>
 		<h1 id="gestion-hub-hero-heading" class="methode-spa-hero__title"><?php echo esc_html( $hero_title ); ?></h1>

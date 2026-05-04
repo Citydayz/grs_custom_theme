@@ -57,6 +57,8 @@ function cbs_offres_niveau_1_defaults(): array {
 		'hero_kicker'       => __( 'Niveau 1 — Offre d\'entrée', 'cbs-theme' ),
 		'hero_title'        => __( 'Diagnostic stratégique spa', 'cbs-theme' ),
 		'hero_subtitle'     => __( 'Avant d\'investir, comprendre. Avant de construire, sécuriser. Le diagnostic spa pose les fondations d\'un projet rentable.', 'cbs-theme' ),
+		'accroche_text'     => __( "Avant d'investir, comprendre. Avant de construire, sécuriser.", 'cbs-theme' ),
+		'accroche_sub'      => __( "Un spa hôtelier représente un investissement de 500 000 € à 2 millions d'euros. Avant de lancer les plans, valider la stratégie, le positionnement et la viabilité du projet est une étape décisive — souvent négligée. Le diagnostic stratégique spa pose ces fondations.", 'cbs-theme' ),
 		'prestations_intro' => __( 'Chaque projet spa est unique. Le diagnostic stratégique permet d\'analyser votre situation avec précision avant toute décision d\'investissement.', 'cbs-theme' ),
 		'prestations'       => array(
 			__( 'Analyse du positionnement de l\'hôtel et de sa clientèle', 'cbs-theme' ),
@@ -75,7 +77,29 @@ function cbs_offres_niveau_1_defaults(): array {
 			__( 'Hôtel dont le spa sous-performe', 'cbs-theme' ),
 			__( 'Investisseur qui sécurise son projet', 'cbs-theme' ),
 		),
+		'seo_image'         => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+		'seo_text'          => __( "Le diagnostic spa hôtelier est la première étape indispensable pour poser les bonnes fondations de votre projet. Avant de valider les plans ou d'engager des travaux, un audit de spa pour hôtel 4 et 5 étoiles permet de s'assurer que le concept imaginé est en adéquation avec la clientèle ciblée et le marché local. En tant que consultant spa, mon diagnostic prend en compte l'étude de marché spa hôtelier pour définir un positionnement spa hôtelier unique, rentable et différenciant. L'objectif est de sécuriser votre investissement en identifiant très tôt les incohérences ou les risques opérationnels, qu'il s'agisse de la dimension des cabines, des flux clients ou des espaces de détente. Avec cette analyse stratégique, vous avez toutes les cartes en main pour concevoir un espace bien-être qui servira l'expérience globale de votre établissement, tout en étant optimisé pour l'exploitation.", 'cbs-theme' ),
 		'cta_label'         => __( 'Discuter de votre diagnostic', 'cbs-theme' ),
+	);
+}
+
+/**
+ * @return array<int, array<string, string>>
+ */
+function cbs_offres_niveau_1_profiles_defaults(): array {
+	return array(
+		array(
+			'titre' => __( "Directeur d'hôtel 4★/5★ qui envisage de créer ou rénover un spa et veut sécuriser l'investissement avant les travaux", 'cbs-theme' ),
+			'texte' => '',
+		),
+		array(
+			'titre' => __( "Architecte ou MOA qui cherche une expertise exploitation pour intégrer la réalité du terrain dès la conception", 'cbs-theme' ),
+			'texte' => '',
+		),
+		array(
+			'titre' => __( "Investisseur ou propriétaire qui veut valider la viabilité d'un projet spa avant de s'engager", 'cbs-theme' ),
+			'texte' => '',
+		),
 	);
 }
 
@@ -572,4 +596,180 @@ function cbs_offres_methode_hub_stats_resolved( int $post_id ): array {
 	}
 
 	return $out;
+}
+
+/**
+ * @return array<string, string>
+ */
+function cbs_offres_niveau_3_split_defaults(): array {
+	return array(
+		'image' => 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=80',
+		'title' => __( "Votre spa existe. L'écart entre performance attendue et réalité s'est creusé.", 'cbs-theme' ),
+		'text'  => __(
+			"Un audit spa hôtelier permet de poser un diagnostic clair sur la performance opérationnelle de votre établissement. Trop souvent, l'optimisation d'un spa existant est reléguée au second plan, entraînant une stagnation du taux d'occupation des cabines et un panier moyen spa en deçà du potentiel. En tant que consultant spa hôtelier, mon rôle est d'analyser vos processus et de vous accompagner dans la mise en performance de votre spa. L'objectif est d'aligner la réalité de l'exploitation sur les exigences de la direction hôtelière et de transformer votre espace bien-être en un véritable centre de profit.",
+			'cbs-theme'
+		),
+	);
+}
+
+/**
+ * @return array<int, array<string, string>>
+ */
+function cbs_offres_niveau_3_profiles_defaults(): array {
+	return array(
+		array(
+			'titre' => __( "Directeur d'hôtel dont le spa est ouvert mais sous-performe malgré un bon emplacement", 'cbs-theme' ),
+			'texte' => '',
+		),
+		array(
+			'titre' => __( "Propriétaire ou investisseur qui a repris un établissement avec un spa existant", 'cbs-theme' ),
+			'texte' => '',
+		),
+		array(
+			'titre' => __( "Direction hôtelière qui souhaite externaliser l'optimisation sans revoir l'architecture", 'cbs-theme' ),
+			'texte' => '',
+		),
+	);
+}
+
+/**
+ * @return array<int, array<string, string>>
+ */
+function cbs_offres_niveau_3_stats_default(): array {
+	return array(
+		array(
+			'value' => __( '+30%', 'cbs-theme' ),
+			'label' => __( 'Hausse moyenne du panier constatée après mission', 'cbs-theme' ),
+		),
+		array(
+			'value' => __( '3 à 6 mois', 'cbs-theme' ),
+			'label' => __( "Durée de la mission d'optimisation", 'cbs-theme' ),
+		),
+		array(
+			'value' => __( '100%', 'cbs-theme' ),
+			'label' => __( "Livrables cédés à l'établissement", 'cbs-theme' ),
+		),
+	);
+}
+
+/**
+ * @param int $post_id
+ * @return array<int, array<string, string>>
+ */
+function cbs_offres_niveau_3_stats_resolved( int $post_id ): array {
+	$defaults = cbs_offres_niveau_3_stats_default();
+	if ( ! function_exists( 'get_field' ) ) {
+		return $defaults;
+	}
+
+	$out = array();
+	for ( $i = 1; $i <= 3; $i++ ) {
+		$def   = $defaults[ $i - 1 ] ?? array( 'value' => '', 'label' => '' );
+		$v_raw = get_field( 'cbs_perf_stat_' . $i . '_value', $post_id );
+		$l_raw = get_field( 'cbs_perf_stat_' . $i . '_label', $post_id );
+		$out[] = array(
+			'value' => cbs_offres_scalar( $v_raw, (string) ( $def['value'] ?? '' ) ),
+			'label' => cbs_offres_scalar( $l_raw, (string) ( $def['label'] ?? '' ) ),
+		);
+	}
+
+	return $out;
+}
+
+/**
+ * @return string
+ */
+function cbs_offres_niveau_3_seo_text_default(): string {
+	return __(
+		"Faire appel à un consultant en mise en performance de spa hôtelier est une démarche stratégique pour maximiser la rentabilité de votre espace bien-être. Au-delà d'un simple audit spa hôtelier, l'objectif est d'implémenter des actions correctives concrètes. L'optimisation d'un spa d'hôtel 4 ou 5 étoiles requiert une expertise pointue, tant sur la gestion des flux que sur le management des équipes. En augmentant le taux d'occupation des cabines et en structurant l'offre de soins, le consultant performance spa vous aide à pérenniser l'activité. La rentabilité d'un spa hôtelier ne repose pas uniquement sur son design, mais sur une excellence opérationnelle au quotidien. Mon accompagnement sur-mesure vous garantit des résultats mesurables, alignés avec les standards de l'hôtellerie haut de gamme et les attentes d'une clientèle exigeante.",
+		'cbs-theme'
+	);
+}
+
+/**
+ * @return array<string, string>
+ */
+function cbs_offres_niveau_2_split_defaults(): array {
+	return array(
+		'image' => 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+		'title' => __( "Un spa mal conçu coûte entre 50 000 et 100 000 € en corrections post-ouverture.", 'cbs-theme' ),
+		'text'  => __(
+			"La conception d'un spa hôtelier ne s'improvise pas. Au-delà de l'esthétique, c'est la fonctionnalité et l'ergonomie qui déterminent la rentabilité future de l'espace bien-être. Une assistance maîtrise d'ouvrage spa est indispensable pour traduire les enjeux d'exploitation en cahier des charges technique. Mon rôle est d'assurer la coordination avec les architectes et les bureaux d'études, afin d'anticiper les contraintes opérationnelles (flux clients, rangements, normes d'hygiène, acoustique). Cette sécurisation du projet spa est essentielle pour les hôtels 4 et 5 étoiles souhaitant offrir une expérience client irréprochable sans compromettre l'efficacité de leurs équipes.",
+			'cbs-theme'
+		),
+	);
+}
+
+/**
+ * @return array<int, array<string, string>>
+ */
+function cbs_offres_niveau_2_profiles_defaults(): array {
+	return array(
+		array(
+			'titre' => __( "Directeur d'hôtel 4★/5★ qui prépare la création ou rénovation d'un spa from scratch", 'cbs-theme' ),
+			'texte' => '',
+		),
+		array(
+			'titre' => __( "Architecte ou maître d'ouvrage qui veut intégrer une expertise exploitation dès la conception", 'cbs-theme' ),
+			'texte' => '',
+		),
+		array(
+			'titre' => __( "Investisseur ou propriétaire qui veut cadrer la rentabilité avant le lancement des travaux", 'cbs-theme' ),
+			'texte' => '',
+		),
+	);
+}
+
+/**
+ * @return array<int, array<string, string>>
+ */
+function cbs_offres_niveau_2_stats_default(): array {
+	return array(
+		array(
+			'value' => __( '6 à 12 mois', 'cbs-theme' ),
+			'label' => __( "Durée d'accompagnement", 'cbs-theme' ),
+		),
+		array(
+			'value' => __( '+13 projets', 'cbs-theme' ),
+			'label' => __( "Spas hôteliers sécurisés", 'cbs-theme' ),
+		),
+		array(
+			'value' => __( '100%', 'cbs-theme' ),
+			'label' => __( "Livrables cédés à l'établissement", 'cbs-theme' ),
+		),
+	);
+}
+
+/**
+ * @param int $post_id
+ * @return array<int, array<string, string>>
+ */
+function cbs_offres_niveau_2_stats_resolved( int $post_id ): array {
+	$defaults = cbs_offres_niveau_2_stats_default();
+	if ( ! function_exists( 'get_field' ) ) {
+		return $defaults;
+	}
+
+	$out = array();
+	for ( $i = 1; $i <= 3; $i++ ) {
+		$def   = $defaults[ $i - 1 ] ?? array( 'value' => '', 'label' => '' );
+		$v_raw = get_field( 'cbs_conception_stat_' . $i . '_value', $post_id );
+		$l_raw = get_field( 'cbs_conception_stat_' . $i . '_label', $post_id );
+		$out[] = array(
+			'value' => cbs_offres_scalar( $v_raw, (string) ( $def['value'] ?? '' ) ),
+			'label' => cbs_offres_scalar( $l_raw, (string) ( $def['label'] ?? '' ) ),
+		);
+	}
+
+	return $out;
+}
+
+/**
+ * @return string
+ */
+function cbs_offres_niveau_2_seo_text_default(): string {
+	return __(
+		"L'assistance à maîtrise d'ouvrage spa hôtelier est la garantie d'un projet viable et pérenne. En tant que consultant spa MOA, j'interviens en amont pour m'assurer que la conception de votre spa d'hôtel 4 ou 5 étoiles réponde aux exigences réelles de l'exploitation. La coordination entre architectes, ingénieurs et futurs exploitants est le cœur de ma mission. Mon expertise permet d'éviter les erreurs d'aménagement coûteuses et de maximiser l'utilisation de chaque mètre carré. En anticipant les besoins en personnel, en équipements et en parcours client, je contribue directement à la future rentabilité de votre spa hôtelier. Confier cette sécurisation à un expert, c'est s'assurer d'une ouverture sereine et d'un espace bien-être performant dès le premier jour.",
+		'cbs-theme'
+	);
 }

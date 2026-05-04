@@ -2,6 +2,42 @@
  * CBS Theme — pages Pôle Gestion (content-structure.md §4)
  */
 
+/* Hero — image à la une en fond (cover + overlay, repli fond silver-900 dans cards.css). */
+.methode-spa-hero,
+.offre-gestion-hero,
+.page-references__hero,
+.qui-sn-hero {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.methode-spa-hero[style*="background-image"],
+.offre-gestion-hero[style*="background-image"],
+.page-references__hero[style*="background-image"],
+.qui-sn-hero[style*="background-image"] {
+	background-color: transparent;
+}
+
+.methode-spa-hero[style*="background-image"]::before,
+.offre-gestion-hero[style*="background-image"]::before,
+.page-references__hero[style*="background-image"]::before,
+.qui-sn-hero[style*="background-image"]::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: var(--cbs-overlay-dark);
+	z-index: 0;
+	pointer-events: none;
+}
+
+.methode-spa-hero__inner,
+.page-references__hero-inner {
+	position: relative;
+	z-index: 1;
+}
+
 /* Badge géographique (hero hub) — reprend la logique .profile-card__badge (contraste AA) */
 .offre-gestion__badge--hero {
 	display: inline-block;
@@ -153,6 +189,324 @@
 
 .offre-gestion__position-text p:last-child {
 	margin-bottom: 0;
+}
+
+/* Staffing §5 — split positionnement image / texte (fond blanc, distinct du modèle) */
+.offre-gestion-position-split {
+	background-color: var(--cbs-white);
+}
+
+.offre-gestion-position-split__grid {
+	display: grid;
+	gap: var(--cbs-space-10);
+	grid-template-columns: 1fr;
+	align-items: stretch;
+}
+
+.offre-gestion-position-split__media,
+.offre-gestion-position-split__image {
+	position: relative;
+	overflow: hidden;
+	align-self: stretch;
+	width: 100%;
+	min-block-size: 26.25rem;
+	background-color: var(--cbs-silver-200);
+}
+
+.offre-gestion-position-split__img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.offre-gestion-position-split__body {
+	align-self: center;
+	min-width: 0;
+	padding-block: var(--cbs-space-6);
+	padding-inline: 0;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-position-split__grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 0;
+		align-items: stretch;
+		min-height: 480px;
+	}
+
+	.offre-gestion-position-split__media,
+	.offre-gestion-position-split__image {
+		height: 100%;
+		min-block-size: 0;
+	}
+
+	.offre-gestion-position-split__body {
+		padding-inline: var(--cbs-space-12);
+		padding-block: var(--cbs-space-8);
+		align-self: stretch;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.offre-gestion-position-split__body > .offre-detail__h2:first-child {
+	margin-top: 0;
+}
+
+/* Staffing §5 — modèle tarifaire (fond silver-50, distinct du positionnement) */
+.offre-gestion-staff-modele {
+	background-color: var(--cbs-silver-50);
+}
+
+.offre-gestion-staff-modele__inner {
+	max-width: var(--cbs-container-max);
+	margin-inline: auto;
+}
+
+.offre-gestion-staff-modele__h2 {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h2);
+	font-weight: 600;
+	line-height: var(--cbs-leading-snug);
+	color: var(--cbs-silver-900);
+	margin: 0 0 var(--cbs-space-5);
+	text-align: left;
+}
+
+.offre-gestion-staff-modele__intro {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	font-weight: 600;
+	color: var(--cbs-silver-900);
+	line-height: var(--cbs-leading-relaxed);
+	margin: 0 0 var(--cbs-space-8);
+	max-width: 48rem;
+}
+
+.offre-gestion-staff-modele__cards {
+	display: grid;
+	gap: var(--cbs-space-8);
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-staff-modele__cards {
+		grid-template-columns: repeat(2, 1fr);
+		align-items: stretch;
+	}
+}
+
+.offre-gestion-staff-modele__card {
+	background-color: var(--cbs-white);
+	border: 1px solid var(--cbs-silver-200);
+	padding: var(--cbs-space-8);
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--cbs-radius-md);
+	min-height: 0;
+}
+
+.offre-gestion-staff-modele__card-title {
+	font-family: var(--cbs-font-serif);
+	font-size: var(--cbs-text-h3);
+	font-weight: 600;
+	line-height: var(--cbs-leading-snug);
+	color: var(--cbs-silver-900);
+	margin: 0 0 var(--cbs-space-5);
+}
+
+.offre-gestion-staff-modele__list {
+	margin: 0;
+	padding: 0;
+	padding-inline-start: 1.2em;
+	list-style: disc;
+	color: var(--cbs-silver-700);
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	line-height: var(--cbs-leading-relaxed);
+}
+
+.offre-gestion-staff-modele__list li {
+	margin-block-end: var(--cbs-space-3);
+	padding-inline-start: var(--cbs-space-1);
+}
+
+.offre-gestion-staff-modele__list li:last-child {
+	margin-block-end: 0;
+}
+
+.offre-gestion-staff-modele__card-text {
+	margin: 0;
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-small);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-700);
+}
+
+/* Massages §6 : modèle en clair tout en gardant la classe `--dark`. */
+.offre-gestion-staff-modele--dark {
+	background-color: var(--cbs-silver-50) !important;
+}
+
+.offre-gestion-staff-modele--dark .offre-gestion-staff-modele__h2,
+.offre-gestion-staff-modele--dark .offre-gestion-staff-modele__intro {
+	color: var(--cbs-silver-900);
+}
+
+.offre-gestion-staff-modele--dark .offre-gestion-staff-modele__card {
+	background: var(--cbs-white);
+	border: 1px solid var(--cbs-silver-200);
+	box-shadow: none;
+}
+
+.offre-gestion-staff-modele--dark .offre-gestion-staff-modele__card-title {
+	color: var(--cbs-silver-900);
+}
+
+.offre-gestion-staff-modele--dark .offre-gestion-staff-modele__list li,
+.offre-gestion-staff-modele--dark .offre-gestion-staff-modele__card-text {
+	color: var(--cbs-silver-700);
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-staff-seo--media-leading .offre-gestion-staff-seo__content {
+		padding-inline: var(--cbs-space-8) var(--cbs-space-12);
+	}
+}
+
+/* Staffing §5 — SEO split avant CTA (fond blanc) */
+.offre-gestion-staff-seo {
+	background-color: var(--cbs-white);
+}
+
+.offre-gestion-massages-planif {
+	background-color: var(--cbs-silver-900);
+}
+
+.offre-gestion-massages-planif .offre-detail__h2 {
+	color: var(--cbs-white);
+}
+
+.offre-gestion-massages-planif .offre-gestion-staff-seo__body p {
+	color: var(--cbs-silver-300);
+}
+
+/* Massages §6 SEO (fond sombre) ; double classe pour passer après `.offre-gestion-staff-seo`. */
+.offre-gestion-massages-seo.offre-gestion-staff-seo {
+	background-color: var(--cbs-silver-900);
+}
+
+.offre-gestion-massages-seo .offre-detail__h2 {
+	color: var(--cbs-white);
+}
+
+.offre-gestion-massages-seo .offre-gestion-staff-seo__body p {
+	color: var(--cbs-silver-300);
+}
+
+.offre-gestion-massages-seo .offre-gestion-staff-seo__img {
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Missions établissement (Staffing / Massages) : fond clair explicite via `.methode-niveaux--light` en markup. */
+.methode-niveaux--light {
+	background-color: var(--cbs-silver-50);
+}
+
+.methode-niveaux--light .offre-detail__h2 {
+	color: var(--cbs-silver-900);
+}
+
+.methode-niveaux--light .phase-card--light {
+	background: var(--cbs-white);
+	border-color: var(--cbs-silver-200);
+}
+
+.methode-niveaux--light .phase-card__number,
+.methode-niveaux--light .phase-card__title {
+	color: var(--cbs-silver-900);
+}
+
+.offre-gestion-staff-seo__split {
+	display: grid;
+	gap: var(--cbs-space-8);
+	grid-template-columns: 1fr;
+	align-items: stretch;
+	min-width: 0;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-staff-seo__split {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		align-items: stretch;
+		column-gap: 0;
+	}
+}
+
+.offre-gestion-staff-seo__content {
+	padding-inline: 0;
+	padding-block: var(--cbs-space-6);
+	min-width: 0;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-staff-seo__content {
+		padding-inline: var(--cbs-space-12) var(--cbs-space-8);
+	}
+}
+
+.offre-gestion-staff-seo__content .offre-detail__h2 {
+	margin-top: 0;
+	text-align: left;
+}
+
+.offre-gestion-staff-seo__body {
+	font-family: var(--cbs-font-sans);
+	font-size: var(--cbs-text-body);
+	line-height: var(--cbs-leading-relaxed);
+	color: var(--cbs-silver-700);
+}
+
+.offre-gestion-staff-seo__body p {
+	margin: 0 0 var(--cbs-space-4);
+	text-align: left;
+}
+
+.offre-gestion-staff-seo__body p:last-child {
+	margin-bottom: 0;
+}
+
+.offre-gestion-staff-seo__media {
+	position: relative;
+	min-block-size: 17.5rem;
+	overflow: hidden;
+	background-color: var(--cbs-silver-100);
+	align-self: stretch;
+}
+
+.offre-gestion-staff-seo__img {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+@media (min-width: 768px) {
+	.offre-gestion-staff-seo__media {
+		min-block-size: auto;
+	}
 }
 
 .offre-gestion__modele-intro {

@@ -1399,6 +1399,31 @@
             "delay": 0
         },
         {
+            "key": "field_cbs_staffing_positionnement_image",
+            "label": "Staffing — Image positionnement",
+            "name": "cbs_staffing_positionnement_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Colonne gauche du split Positionnement — vide = Unsplash défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_cbs_gestion_s_modele_h2",
             "label": "Staffing — Titre section modèle",
             "name": "cbs_gestion_s_modele_h2",
@@ -1576,7 +1601,7 @@
             "name": "cbs_gestion_s_note",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "Legacy — non affichée en front.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1585,6 +1610,51 @@
                 "id": ""
             },
             "rows": 2,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_cbs_staffing_seo_image",
+            "label": "Staffing — Image bloc SEO (avant CTA)",
+            "name": "cbs_staffing_seo_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Colonne droite — vide = Unsplash défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_cbs_staffing_seo_text",
+            "label": "Staffing — Texte SEO (avant CTA)",
+            "name": "cbs_staffing_seo_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Vide = paragraphes par défaut du thème.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 8,
             "default_value": "",
             "new_lines": "",
             "maxlength": "",
@@ -1707,6 +1777,31 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_cbs_massages_positionnement_image",
+            "label": "Massages — Image positionnement (split)",
+            "name": "cbs_massages_positionnement_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Colonne gauche du bloc Positionnement. Vide = image par défaut (Unsplash).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_cbs_gestion_m_modele_h2",
@@ -1921,6 +2016,76 @@
             "delay": 0
         },
         {
+            "key": "field_cbs_massages_planif_image",
+            "label": "Massages — Image planification (split)",
+            "name": "cbs_massages_planif_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Colonne droite du bloc Planification. Vide = image par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_cbs_massages_seo_image",
+            "label": "Massages — Image bloc SEO (avant CTA)",
+            "name": "cbs_massages_seo_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Colonne gauche du bloc SEO ; vide pour l’image par défaut.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_cbs_massages_seo_text",
+            "label": "Massages — Texte SEO (avant CTA)",
+            "name": "cbs_massages_seo_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Vide = paragraphes par défaut du thème.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 8,
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_cbs_gestion_m_cta_label",
             "label": "Massages — Libellé CTA",
             "name": "cbs_gestion_m_cta_label",
@@ -1988,5 +2153,5 @@
     "description": "Champs pour le pôle Gestion (content-structure.md §4 à §6). Utiliser l’onglet correspondant à la page éditée.",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1776110800
+    "modified": 1746312400
 }

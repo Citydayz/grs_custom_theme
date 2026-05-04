@@ -1,6 +1,6 @@
 <?php
 /**
- * Bandeau logos partenaires (accueil) — carrousel CSS.
+ * Bandeau logos partenaires (accueil) — marquee infini CSS (deux bandes identiques, translateX -50 %).
  *
  * Logos : menu Admin « Partenaires hôtels » — image mise en avant = logo, titre = nom de l’hôtel,
  * ordre = menu_order.
@@ -44,15 +44,21 @@ if ( empty( $slides ) ) {
 	<div class="cbs-partners__slider">
 		<div class="cbs-partners__track">
 			<?php
-			for ( $pass = 0; $pass < 2; $pass++ ) {
+			for ( $pass = 0; $pass < 2; $pass++ ) :
+				?>
+			<div class="cbs-partners__strip"<?php echo 1 === $pass ? ' aria-hidden="true"' : ''; ?>>
+				<?php
 				foreach ( $slides as $slide ) {
 					?>
-					<div class="cbs-partners__slide">
-						<img src="<?php echo esc_url( $slide['url'] ); ?>" alt="<?php echo esc_attr( $slide['alt'] ); ?>" loading="lazy" decoding="async" />
-					</div>
+				<div class="cbs-partners__slide">
+					<img class="cbs-partners__logo" src="<?php echo esc_url( $slide['url'] ); ?>" alt="<?php echo esc_attr( $slide['alt'] ); ?>" loading="lazy" decoding="async" />
+				</div>
 					<?php
 				}
-			}
+				?>
+			</div>
+				<?php
+			endfor;
 			?>
 		</div>
 	</div>

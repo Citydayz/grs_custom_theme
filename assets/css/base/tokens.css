@@ -29,6 +29,7 @@
 	--cbs-dark: var(--cbs-silver-900);
 
 	/* Sémantiques */
+	--cbs-text-primary: var(--cbs-silver-800);
 	--cbs-success: #2d6a4f;
 	--cbs-error: #c0392b;
 	--cbs-warning: #d4a017;
@@ -104,10 +105,27 @@
 	--cbs-divider-gold: 1px solid var(--cbs-gold-muted);
 	--cbs-overlay-dark: rgba(13, 17, 23, 0.55);
 	--cbs-overlay-silver: rgba(13, 17, 23, 0.35);
+	--cbs-overlay-bento-fade: rgba(0, 0, 0, 0.7);
+	--cbs-overlay-bento-hover-bottom: rgba(0, 0, 0, 0.82);
+	--cbs-overlay-bento-hover-mid: rgba(0, 0, 0, 0.15);
+
+	/* Page références — grille bento */
+	--cbs-layout-ref-bento-large: 32.5rem;
+	--cbs-layout-ref-bento-small: 16.25rem;
+	--cbs-layout-ref-bento-mobile: 17.5rem;
+	--cbs-layout-ref-seo-media-min-h: 26.25rem;
+
+	/* Citations page références */
+	--cbs-text-pullquote-mark: clamp(3rem, 10vw, 5rem);
+	--cbs-text-ref-citation: clamp(1.2rem, 2.5vw, 1.8rem);
+	--cbs-text-attribution-cite: 0.6875rem;
+	--cbs-leading-quote-mark: 0.5;
 
 	/* === TRANSITIONS === */
 	--cbs-transition-fast: 0.15s ease;
 	--cbs-transition-base: 0.25s ease;
 	--cbs-transition-slow: 0.4s ease;
 	--cbs-transition-reveal: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+	--cbs-transition-bento-scale: transform 0.5s ease;
+	--cbs-transition-bento-overlay-bg: background 0.3s ease;
 }

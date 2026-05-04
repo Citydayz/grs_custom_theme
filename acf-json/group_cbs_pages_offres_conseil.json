@@ -791,6 +791,46 @@
       "placeholder": ""
     },
     {
+      "key": "field_cbs_diag_accroche",
+      "label": "N1 — Accroche (citation)",
+      "name": "cbs_diag_accroche",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Texte principal du bandeau sous le hero (italique serif).",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Avant d'investir, comprendre. Avant de construire, sécuriser.",
+      "placeholder": "",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cbs_diag_accroche_sub",
+      "label": "N1 — Accroche — paragraphe",
+      "name": "cbs_diag_accroche_sub",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Sous-texte sous le filet doré (Montserrat).",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 4,
+      "default_value": "Un spa hôtelier représente un investissement de 500 000 € à 2 millions d'euros. Avant de lancer les plans, valider la stratégie, le positionnement et la viabilité du projet est une étape décisive — souvent négligée. Le diagnostic stratégique spa pose ces fondations.",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
       "key": "field_cbs_offres_n1_prestations_intro",
       "label": "N1 — Intro section Prestations",
       "name": "cbs_offres_n1_prestations_intro",
@@ -1559,6 +1599,524 @@
       "maxlength": "",
       "prepend": "",
       "append": ""
+    },
+    {
+      "key": "field_cbs_perf_split_tab",
+      "label": "Niveau 3 - Split Image/Texte",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_perf_split_image",
+      "label": "Split : Image",
+      "name": "cbs_perf_split_image",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "url",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_cbs_perf_split_text",
+      "label": "Split : Texte",
+      "name": "cbs_perf_split_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "rows": 6,
+      "new_lines": "wpautop"
+    },
+    {
+      "key": "field_cbs_perf_profiles_tab",
+      "label": "Niveau 3 - Profils",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_perf_profiles",
+      "label": "Profils (3 maximum)",
+      "name": "cbs_perf_profiles",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "field_cbs_perf_profiles_titre",
+      "min": 0,
+      "max": 3,
+      "layout": "block",
+      "button_label": "Ajouter un profil",
+      "sub_fields": [
+        {
+          "key": "field_cbs_perf_profiles_titre",
+          "label": "Titre",
+          "name": "titre",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "parent_repeater": "field_cbs_perf_profiles"
+        },
+        {
+          "key": "field_cbs_perf_profiles_texte",
+          "label": "Texte",
+          "name": "texte",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 3,
+          "new_lines": "",
+          "parent_repeater": "field_cbs_perf_profiles"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_perf_stats_tab",
+      "label": "Niveau 3 - Stats",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_perf_stat_1_value",
+      "label": "Stat 1 : Valeur",
+      "name": "cbs_perf_stat_1_value",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_perf_stat_1_label",
+      "label": "Stat 1 : Label",
+      "name": "cbs_perf_stat_1_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_perf_stat_2_value",
+      "label": "Stat 2 : Valeur",
+      "name": "cbs_perf_stat_2_value",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_perf_stat_2_label",
+      "label": "Stat 2 : Label",
+      "name": "cbs_perf_stat_2_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_perf_stat_3_value",
+      "label": "Stat 3 : Valeur",
+      "name": "cbs_perf_stat_3_value",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_perf_stat_3_label",
+      "label": "Stat 3 : Label",
+      "name": "cbs_perf_stat_3_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_perf_seo_tab",
+      "label": "Niveau 3 - SEO",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_perf_seo_text_bottom",
+      "label": "Texte SEO (bas de page)",
+      "name": "cbs_perf_seo_text_bottom",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 6,
+    },
+    {
+      "key": "field_cbs_conception_split_tab",
+      "label": "Niveau 2 - Split Image/Texte",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_conception_split_image",
+      "label": "Split : Image",
+      "name": "cbs_conception_split_image",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "url",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_cbs_conception_split_text",
+      "label": "Split : Texte",
+      "name": "cbs_conception_split_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "rows": 6,
+      "new_lines": "wpautop"
+    },
+    {
+      "key": "field_cbs_conception_profiles_tab",
+      "label": "Niveau 2 - Profils",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_conception_profiles",
+      "label": "Profils (3 maximum)",
+      "name": "cbs_conception_profiles",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "field_cbs_conception_profiles_titre",
+      "min": 0,
+      "max": 3,
+      "layout": "block",
+      "button_label": "Ajouter un profil",
+      "sub_fields": [
+        {
+          "key": "field_cbs_conception_profiles_titre",
+          "label": "Titre",
+          "name": "titre",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "parent_repeater": "field_cbs_conception_profiles"
+        },
+        {
+          "key": "field_cbs_conception_profiles_texte",
+          "label": "Texte",
+          "name": "texte",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 3,
+          "new_lines": "",
+          "parent_repeater": "field_cbs_conception_profiles"
+        }
+      ]
+    },
+    {
+      "key": "field_cbs_conception_stats_tab",
+      "label": "Niveau 2 - Stats",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_conception_stat_1_value",
+      "label": "Stat 1 : Valeur",
+      "name": "cbs_conception_stat_1_value",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_conception_stat_1_label",
+      "label": "Stat 1 : Label",
+      "name": "cbs_conception_stat_1_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_conception_stat_2_value",
+      "label": "Stat 2 : Valeur",
+      "name": "cbs_conception_stat_2_value",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_conception_stat_2_label",
+      "label": "Stat 2 : Label",
+      "name": "cbs_conception_stat_2_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_conception_stat_3_value",
+      "label": "Stat 3 : Valeur",
+      "name": "cbs_conception_stat_3_value",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_conception_stat_3_label",
+      "label": "Stat 3 : Label",
+      "name": "cbs_conception_stat_3_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_cbs_conception_seo_tab",
+      "label": "Niveau 2 - SEO",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cbs_conception_seo_image",
+      "label": "Image SEO",
+      "name": "cbs_conception_seo_image",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "url",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_cbs_conception_seo_text_bottom",
+      "label": "Texte SEO (bas de page)",
+      "name": "cbs_conception_seo_text_bottom",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 6,
+      "new_lines": "wpautop"
     }
   ],
   "location": [
@@ -1601,5 +2159,5 @@
   "description": "Champs éditables pour La Méthode Spa Profit™ et les 3 niveaux (content-structure.md §3).",
   "show_in_rest": 0,
   "display_title": "",
-  "modified": 1776969600
+  "modified": 1777545600
 }

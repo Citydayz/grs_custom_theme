@@ -13,6 +13,8 @@ define( 'CBS_URI', get_template_directory_uri() );
 
 // Inclusions (helpers avant setup : meta title / SEO dans setup.php).
 require_once CBS_DIR . '/inc/helpers.php';
+require_once CBS_DIR . '/inc/legal-page.php';
+require_once CBS_DIR . '/inc/blog-archive.php';
 require_once CBS_DIR . '/inc/setup.php';
 require_once CBS_DIR . '/inc/enqueue.php';
 require_once CBS_DIR . '/inc/cpt.php';
@@ -26,3 +28,5 @@ require_once CBS_DIR . '/inc/ajax.php';
 require_once CBS_DIR . '/inc/shortcodes.php';
 require_once CBS_DIR . '/inc/offres-conseil-defaults.php';
 require_once CBS_DIR . '/inc/offres-gestion-defaults.php';
+require_once CBS_DIR . '/inc/references-defaults.php';
+require_once CBS_DIR . '/inc/qui-sommes-nous-defaults.php';

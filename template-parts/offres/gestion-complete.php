@@ -44,8 +44,16 @@ $icons_resp_g = array(
 	'helm', 'calendar', 'team', 'star', 'list', 'megaphone', 'chart_line',
 	'activity', 'box', 'brush', 'box',
 );
+
+$hero_bg = '';
+if ( has_post_thumbnail() ) {
+	$thumb_url = get_the_post_thumbnail_url( null, 'full' );
+	if ( is_string( $thumb_url ) && $thumb_url !== '' ) {
+		$hero_bg = ' style="background-image: url(\'' . esc_url( $thumb_url ) . '\');"';
+	}
+}
 ?>
-<section class="methode-spa-hero methode-spa-hero--compact offre-gestion-hero cbs-section" aria-labelledby="gestion-c-hero-heading">
+<section class="methode-spa-hero methode-spa-hero--compact offre-gestion-hero cbs-section" aria-labelledby="gestion-c-hero-heading"<?php echo $hero_bg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_url(). ?>>
 	<div class="methode-spa-hero__inner cbs-container">
 		<p class="methode-spa-hero__kicker"><?php echo esc_html( $modele ); ?></p>
 		<h1 id="gestion-c-hero-heading" class="methode-spa-hero__title"><?php echo esc_html( $hero_title ); ?></h1>

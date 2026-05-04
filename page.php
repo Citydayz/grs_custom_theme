@@ -18,6 +18,7 @@ $map  = array(
 	'staffing-spa'            => 'offres/staffing',
 	'massages-en-chambre-hotel' => 'offres/massages-chambre',
 	'qui-sommes-nous'         => 'offres/qui-sommes-nous',
+	'references'              => 'references',
 );
 ?>
 <main id="primary" class="site-main">
